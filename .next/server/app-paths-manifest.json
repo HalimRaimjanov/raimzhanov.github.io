@@ -1,5 +1,14 @@
 {
-  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/about/page": "app/about/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/about/page": "app/about/page.js"
+  "/gallery/page": "app/gallery/page.js",
+  "/page": "app/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/work/page": "app/work/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/work/[slug]/page": "app/work/[slug]/page.js",
+  "/og/route": "app/og/route.js"
 }
