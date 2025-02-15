@@ -11,4 +11,7 @@ export default {
     unoptimized: true,
   },
   basePath: "/raimzhanov.github.io", // Укажи правильное имя репозитория
+  assetPrefix: "/raimzhanov.github.io/", // Правильные пути для статики
 };
+
+
