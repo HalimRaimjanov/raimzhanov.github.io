@@ -399,43 +399,287 @@ const about = {
       },
     ],
   },
-  technical: {
+  courses: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
+    title: "Courses",
+    course: [
       {
-        title: "Figma",
+        name: "Python Developer",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Completed a professional Python Developer course lasting 48 hours.
+            <br />
+            <b>Study Period:</b> March 2023 – April 2023.
+          </>
         ),
-        // optional: leave the array empty if you don't want to display images
+        images: [{
+          src: "/images/courses/python-dev.png",
+          alt: "Python",
+          width: 16,
+          height: 9,
+        },],
+      },
+      {
+        name: "Basics of Angular",
+        description: (
+          <>
+            Completed a professional Python Developer course lasting 48 hours.
+            <br />
+            <b>Study Period:</b> May 2023 – June 2023.
+          </>
+        ),
+        images: [{
+          src: "/images/courses/angular-dev.png",
+          alt: "Angular",
+          width: 16,
+          height: 9,
+        },],
+      },
+      {
+        name: "Comprehensive Vue.js Study",
+        description: (
+          <>
+            Completed a professional Python Developer course lasting 48 hours.
+            <br />
+            <b>Study Period:</b> July 2023 – August 2023.
+          </>
+        ),
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/courses/vuejs-dev.png",
+            alt: "VueJs",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        name: "Comprehensive React.js Study",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Completed a professional Python Developer course lasting 48 hours.
+            <br />
+            <b>Study Period:</b> Sep 2023 – Oct 2023.
+          </>
         ),
+        images: [{
+          src: "/images/courses/reactjs-dev.png",
+          alt: "ReactJs",
+          width: 16,
+          height: 9,
+        },],
+      },
+    ],
+  },
+  technical: {
+    display: true, // set to false to hide this section
+    title: "Technical skills",
+    skills: [
+      {
+        title: "Figma",
+        description: <></>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/skills/figma.png",
+            alt: "Figma",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "MYSQL",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/mysql.png",
+            alt: "MYSQL",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "Python",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/python.png",
+            alt: "Python",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "Bootstrap",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/bootstrap.png",
+            alt: "Bootstrap",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "CSS",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/css.png",
+            alt: "Css",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "JS",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/js.png",
+            alt: "JS",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "HTML",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/html.png",
+            alt: "HTML",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "LESS",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/less.png",
+            alt: "Less",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "NodeJs",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/nodejs.png",
+            alt: "NodeJs",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "Python",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/python.png",
+            alt: "Python",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "Git",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/git.png",
+            alt: "Git",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "Github",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/github.svg",
+            alt: "Github",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "Jira",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/Jira.png",
+            alt: "Jira",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "PS",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/ps.png",
+            alt: "PS",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "React",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/react.png",
+            alt: "React",
+            width: 100,
+            height: 100,
+          },
+        ],
+      },
+      {
+        title: "Slack",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/skills/slack.png",
+            alt: "Slack",
+            width: 100,
+            height: 100,
           },
         ],
       },
@@ -445,7 +689,7 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about developing and tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -454,7 +698,7 @@ const blog = {
 const work = {
   label: "Work",
   title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
+  description: `Dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
