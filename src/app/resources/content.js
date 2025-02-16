@@ -136,9 +136,9 @@ const about = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
+            src: "/images/cover.png",
+            alt: "Mbulak Website",
+            width: 18,
             height: 9,
           },
         ],
@@ -174,7 +174,14 @@ const about = {
           </>,
           <>Improved system scalability and optimized backend architecture.</>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/mbulak.png",
+            alt: "Mbulak",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Mbulak",
@@ -198,7 +205,14 @@ const about = {
             fintech solutions.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/mbulak.png",
+            alt: "Mbulak",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Mbulak",
@@ -219,7 +233,14 @@ const about = {
           </>,
           <>Gained experience in API development and system debugging.</>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/mbulak.png",
+            alt: "Mbulak",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Mbulak",
@@ -239,7 +260,14 @@ const about = {
             software optimization.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/mbulak.png",
+            alt: "Mbulak",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Mbulak",
@@ -262,7 +290,14 @@ const about = {
             increase call efficiency.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/callcenter.png",
+            alt: "Callcenter",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "Mbulak",
@@ -286,7 +321,14 @@ const about = {
             disputes.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/callcenter.png",
+            alt: "Callcenter",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "S Parfum",
@@ -310,7 +352,20 @@ const about = {
             repeat purchases.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/sparfum-1.png",
+            alt: "S Parfum",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/sparfum-2.png",
+            alt: "S Parfum",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
