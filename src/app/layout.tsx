@@ -1,5 +1,6 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
+import Script from 'next/script';
 
 import classNames from "classnames";
 
@@ -90,6 +91,24 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         code.variable,
       )}
     >
+      <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX');
+            `,
+          }}
+        />
+      
+    
       <ToastProvider>
         <Column style={{ minHeight: "100vh" }} as="body" fillWidth margin="0" padding="0">
           <Background
