@@ -93,7 +93,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     >
       <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-KRB9EEC6RS`}
         />
         <Script
           id="google-analytics"
