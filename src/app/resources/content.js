@@ -401,8 +401,23 @@ const about = {
   },
   courses: {
     display: true, // set to false to hide this section
-    title: "Courses",
-    course: [
+    title: "Sertificates",
+    course: [{
+        name: "Database Administrator (DBA)",
+        description: (
+          <>
+            Сompleted online training, offline testing and assessment, and received a certificate.
+            <br />
+            <b>Period:</b> April 2025 – May 2025.
+          </>
+        ),
+        images: [{
+          src: "/images/courses/DB_admin.jpg",
+          alt: "DBA",
+          width: 16,
+          height: 9,
+        },],
+      },
       {
         name: "Python Developer",
         description: (
