@@ -11,8 +11,8 @@ export function Videos() {
   if (!videos.length) return null;
 
   return (
-    <Column as="section" lang="ru" fillWidth gap="xl" marginBottom="40">
-      <Heading as="h2" variant="heading-strong-xl">Видео о технологиях</Heading>
+    <Column as="section" lang="en" fillWidth gap="xl" marginBottom="40">
+      <Heading as="h2" variant="heading-strong-xl">Technology videos</Heading>
       {videos.map((video) => (
         <Column as="article" key={video.id} fillWidth gap="m">
           <iframe
@@ -28,10 +28,10 @@ export function Videos() {
           <Text variant="body-default-m" onBackground="neutral-weak">{video.description}</Text>
           <Flex gap="24" wrap>
             <SmartLink href={`https://www.youtube.com/watch?v=${video.id}`} suffixIcon="arrowUpRightFromSquare">
-              Смотреть на YouTube
+              Watch on YouTube
             </SmartLink>
             {video.sourceUrl && <SmartLink href={video.sourceUrl} suffixIcon="arrowUpRightFromSquare">
-              Публикация в Telegram
+              View Telegram post
             </SmartLink>}
           </Flex>
         </Column>

@@ -1,4 +1,4 @@
-import { Flex } from "@/once-ui/components";
+import { Column, Heading, Text } from "@/once-ui/components";
 import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { baseURL } from "@/app/resources";
 import { gallery, person } from "@/app/resources/content";
@@ -34,7 +34,7 @@ export async function generateMetadata() {
 
 export default function Gallery() {
   return (
-    <Flex fillWidth>
+    <Column fillWidth gap="l">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -47,7 +47,7 @@ export default function Gallery() {
             url: `https://${baseURL}/gallery`,
             image: gallery.images.map((image) => ({
               "@type": "ImageObject",
-              url: `${baseURL}${image.src}`,
+              url: `https://${baseURL}${image.src}`,
               description: image.alt,
             })),
             author: {
@@ -55,13 +55,17 @@ export default function Gallery() {
               name: person.name,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
+                url: `https://${baseURL}${person.avatar}`,
               },
             },
           }),
         }}
       />
+      <Column gap="s">
+        <Heading as="h1" variant="display-strong-s">{gallery.title}</Heading>
+        <Text onBackground="neutral-weak">Personal moments, places, and portraits. Select a photo to view it in full.</Text>
+      </Column>
       <MasonryGrid />
-    </Flex>
+    </Column>
   );
 }
