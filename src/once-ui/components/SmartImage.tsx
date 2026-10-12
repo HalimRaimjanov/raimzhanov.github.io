@@ -2,6 +2,7 @@
 
 import React, { CSSProperties, useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { getYouTubeId } from "@/app/utils/youtube";
 
 import { Flex, Skeleton } from "@/once-ui/components";
 
@@ -52,14 +53,11 @@ const SmartImage: React.FC<SmartImageProps> = ({
   }, [isEnlarged]);
 
   useEffect(() => {
-    if (isEnlarged) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
+    if (!isEnlarged) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = previousOverflow;
     };
   }, [isEnlarged]);
 
@@ -83,23 +81,9 @@ const SmartImage: React.FC<SmartImageProps> = ({
     };
   };
 
-  const isYouTubeVideo = (url: string) => {
-    const youtubeRegex =
-      /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-    return youtubeRegex.test(url);
-  };
-
-  const getYouTubeEmbedUrl = (url: string) => {
-    const match = url.match(
-      /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/,
-    );
-    return match
-      ? `https://www.youtube.com/embed/${match[1]}?controls=0&rel=0&modestbranding=1`
-      : "";
-  };
-
   const isVideo = src?.endsWith(".mp4");
-  const isYouTube = isYouTubeVideo(src);
+  const youtubeId = getYouTubeId(src);
+  const isYouTube = Boolean(youtubeId);
 
   return (
     <>
@@ -140,7 +124,9 @@ const SmartImage: React.FC<SmartImageProps> = ({
           <iframe
             width="100%"
             height="100%"
-            src={getYouTubeEmbedUrl(src)}
+            src={`https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0`}
+            title={alt || "YouTube video"}
+            loading="lazy"
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

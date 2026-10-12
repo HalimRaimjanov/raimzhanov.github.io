@@ -10,6 +10,7 @@ interface Image {
 
 interface CarouselProps extends React.ComponentProps<typeof Flex> {
   images: Image[];
+  priority?: boolean;
   indicator?: "line" | "thumbnail";
   aspectRatio?: string;
   sizes?: string;
@@ -18,6 +19,7 @@ interface CarouselProps extends React.ComponentProps<typeof Flex> {
 
 const Carousel: React.FC<CarouselProps> = ({
   images = [],
+  priority = false,
   indicator = "line",
   aspectRatio = "16 / 9",
   sizes,
@@ -53,7 +55,7 @@ const Carousel: React.FC<CarouselProps> = ({
       transitionTimeoutRef.current = setTimeout(() => {
         setActiveIndex(nextIndex);
 
-        setTimeout(() => {
+        transitionTimeoutRef.current = setTimeout(() => {
           setIsTransitioning(true);
           transitionTimeoutRef.current = undefined;
         }, 300);
@@ -89,7 +91,7 @@ const Carousel: React.FC<CarouselProps> = ({
       >
         <SmartImage
           sizes={sizes}
-          priority
+          priority={priority && activeIndex === 0}
           radius="l"
           border="neutral-alpha-weak"
           alt={images[activeIndex]?.alt}

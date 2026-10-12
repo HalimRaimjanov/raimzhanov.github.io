@@ -15,7 +15,7 @@ interface ProjectCardProps {
   priority?: boolean;
   images: string[];
   title: string;
-  content: string;
+  hasContent: boolean;
   description: string;
   avatars: { src: string }[];
   link: string;
@@ -25,7 +25,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
   images = [],
   title,
-  content,
+  hasContent,
+  priority = false,
   description,
   avatars,
   link,
@@ -33,6 +34,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Column fillWidth gap="m">
       <Carousel
+        priority={priority}
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image) => ({
           src: image,
@@ -54,7 +56,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </Heading>
           </Flex>
         )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+        {(avatars?.length > 0 || description?.trim() || hasContent) && (
           <Column flex={7} gap="16">
             {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
             {description?.trim() && (
@@ -63,7 +65,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               </Text>
             )}
             <Flex gap="24" wrap>
-              {content?.trim() && (
+              {hasContent && (
                 <SmartLink
                   suffixIcon="arrowRight"
                   style={{ margin: "0", width: "fit-content" }}

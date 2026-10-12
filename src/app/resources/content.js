@@ -17,8 +17,7 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about programming, technology, and share thoughts on
-      the intersection of code, architecture, and problem-solving.
+      Occasional notes on software development, architecture and technology.
     </>
   ),
 };
@@ -51,18 +50,12 @@ const social = [
 const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Full stack Developer</>,
+  description: `Software projects, technical articles and videos by ${person.name}, ${person.role}.`,
+  headline: <>Full Stack Developer & Team Lead</>,
   subline: (
     <>
-      I'm Khalim, a Team Lead at <InlineCode>Mbulak</InlineCode>, where I
-      oversee code reviews,
-      <br />
-      develop projects related to banking services, and conduct technical
-      assessments.
-      <br />I ensure high-quality software development, optimize processes,
-      <br />
-      and guide my team in delivering efficient and scalable solutions.
+      I'm Khalim, a Team Lead at <InlineCode>MBulak</InlineCode>.
+      I build financial software, review code and guide teams from planning to delivery.
     </>
   ),
 };
@@ -70,7 +63,7 @@ const home = {
 const about = {
   label: "About",
   title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `${person.name}: software engineering, team leadership, education and technical skills.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -87,15 +80,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Khalim is a results-driven Team Lead at Mbulak with over seven years of
-        experience in fintech and backend development. He specializes in
-        building scalable financial solutions, optimizing development processes,
-        and leading high-performing teams. His expertise spans project strategy,
-        technical evaluation, and fostering effective communication to drive
-        success. Passionate about guiding projects from concept to completion,
-        Khalim thrives on collaboration and problem-solving. With a strong
-        foundation in software product management, he is dedicated to creating
-        impactful and efficient technology solutions in the financial sector.
+        I lead software development at MBulak, with a focus on financial services,
+        backend systems and databases. My work combines technical planning,
+        code reviews and team development to deliver reliable, maintainable software.
       </>
     ),
   },
@@ -108,30 +95,10 @@ const about = {
         timeframe: "Sep 2024 - Present",
         role: "Team Lead",
         achievements: [
-          <>
-            Lead the development of fintech solutions, optimizing banking
-            services and improving transaction processing speeds.
-          </>,
-          <>
-            Conduct detailed code reviews, enhancing code quality and reducing
-            critical bugs.
-          </>,
-          <>
-            Implement optimized development workflows, increasing team
-            efficiency and reducing project delivery time.
-          </>,
-          <>
-            Conduct technical assessments for new projects, ensuring scalability
-            and performance optimization.
-          </>,
-          <>
-            Foster a collaborative engineering culture, improving cross-team
-            communication and productivity.
-          </>,
-          <>
-            Work with Jira for project tracking, sprint planning, and issue
-            management.
-          </>,
+          <>Lead development of financial software and plan delivery with the engineering team.</>,
+          <>Review code and assess architecture, performance and maintainability.</>,
+          <>Coordinate sprints, priorities and issue tracking in Jira.</>,
+          <>Support engineers and improve development workflows.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -144,35 +111,13 @@ const about = {
         ],
       },
       {
-        company: "Mbulak",
+        company: "MBulak",
         timeframe: "Sep 2023 - Sep 2024",
         role: "Senior Software Engineer",
         achievements: [
-          <>
-            Developed and implemented key backend solutions for the company’s
-            financial products.
-          </>,
-          <>
-            Optimized database and server processes, improving request
-            processing speeds.
-          </>,
-          <>
-            Worked on integrating Tunduk services to streamline and accelerate
-            the financing process for clients.
-          </>,
-          <>
-            Led the development of high-performance backend solutions for
-            financial services.
-          </>,
-          <>
-            Created and maintained advanced SQL procedures for critical
-            financial operations.
-          </>,
-          <>
-            Integrated external services via Python, enhancing automation and
-            data flow.
-          </>,
-          <>Improved system scalability and optimized backend architecture.</>,
+          <>Developed backend services and SQL procedures for financial products.</>,
+          <>Integrated Tunduk and external services using Python.</>,
+          <>Optimized database queries and backend architecture.</>,
         ],
         images: [
           {
@@ -184,26 +129,13 @@ const about = {
         ],
       },
       {
-        company: "Mbulak",
+        company: "MBulak",
         timeframe: "Sep 2022 - Sep 2023",
         role: "Middle Software Engineer",
         achievements: [
-          <>
-            Designed and implemented complex SQL procedures for financial
-            calculations and analytics.
-          </>,
-          <>
-            Developed Python-based integrations with external financial and
-            government services.
-          </>,
-          <>
-            Optimized database queries to improve system performance and reduce
-            processing time.
-          </>,
-          <>
-            Worked closely with cross-functional teams to develop scalable
-            fintech solutions.
-          </>,
+          <>Built SQL procedures for financial calculations and reporting.</>,
+          <>Developed Python integrations with financial and government services.</>,
+          <>Optimized queries and collaborated on backend development.</>,
         ],
         images: [
           {
@@ -215,23 +147,13 @@ const about = {
         ],
       },
       {
-        company: "Mbulak",
+        company: "MBulak",
         timeframe: "July 2021 - Sep 2022",
         role: "Junior Software Engineer",
         achievements: [
-          <>
-            Developed and optimized SQL procedures for financial transactions
-            and reporting.
-          </>,
-          <>
-            Assisted in integrating third-party services using Python for
-            automation and data exchange.
-          </>,
-          <>
-            Collaborated with senior developers on backend architecture
-            improvements.
-          </>,
-          <>Gained experience in API development and system debugging.</>,
+          <>Developed SQL procedures for transactions and reporting.</>,
+          <>Supported Python integrations and API development.</>,
+          <>Investigated defects and contributed to backend improvements.</>,
         ],
         images: [
           {
@@ -243,22 +165,13 @@ const about = {
         ],
       },
       {
-        company: "Mbulak",
+        company: "MBulak",
         timeframe: "Mar 2021 - July 2021",
         role: "Intern",
         achievements: [
-          <>
-            Gained foundational experience in software development, focusing on
-            backend technologies.
-          </>,
-          <>
-            Assisted in writing SQL queries and stored procedures for financial
-            data processing.
-          </>,
-          <>
-            Learned and applied best practices in coding, debugging, and
-            software optimization.
-          </>,
+          <>Supported backend development and financial data processing.</>,
+          <>Wrote SQL queries and stored procedures under supervision.</>,
+          <>Practised debugging and code maintenance.</>,
         ],
         images: [
           {
@@ -270,25 +183,13 @@ const about = {
         ],
       },
       {
-        company: "Mbulak",
+        company: "MBulak",
         timeframe: "Apr 2020 - Mar 2021",
         role: "Senior Call Center Operator",
         achievements: [
-          <>
-            Supervised a team of operators, ensuring high-quality customer
-            service and adherence to company policies.
-          </>,
-          <>
-            Trained new employees, enhancing team performance and knowledge
-            retention.
-          </>,
-          <>
-            Handled escalated customer issues, improving resolution efficiency.
-          </>,
-          <>
-            Assisted in optimizing call scripts and workflow processes to
-            increase call efficiency.
-          </>,
+          <>Supervised call centre operators and trained new staff.</>,
+          <>Resolved escalated customer requests.</>,
+          <>Improved call scripts and service workflows.</>,
         ],
         images: [
           {
@@ -300,26 +201,13 @@ const about = {
         ],
       },
       {
-        company: "Mbulak",
+        company: "MBulak",
         timeframe: "Sep 2018 - Apr 2020",
         role: "Call Center Operator",
         achievements: [
-          <>
-            Provided customer support, assisting clients with financial services
-            and loan applications.
-          </>,
-          <>
-            Processed customer requests efficiently, improving service response
-            times.
-          </>,
-          <>
-            Developed strong communication and problem-solving skills, handling
-            complex client inquiries.
-          </>,
-          <>
-            Maintained accurate customer records and assisted in resolving
-            disputes.
-          </>,
+          <>Assisted customers with financial services and loan applications.</>,
+          <>Processed requests and maintained customer records.</>,
+          <>Resolved enquiries and customer disputes.</>,
         ],
         images: [
           {
@@ -335,22 +223,9 @@ const about = {
         timeframe: "Aug 2017 - Sep 2018",
         role: "Sales Associate",
         achievements: [
-          <>
-            Advised customers on fragrances, providing personalized
-            recommendations based on their preferences.
-          </>,
-          <>
-            Met and exceeded monthly sales targets, contributing to overall
-            store revenue.
-          </>,
-          <>
-            Maintained product displays and ensured a high standard of store
-            presentation.
-          </>,
-          <>
-            Built strong customer relationships, enhancing brand loyalty and
-            repeat purchases.
-          </>,
+          <>Advised customers on fragrances and supported sales.</>,
+          <>Maintained product displays and store presentation.</>,
+          <>Built customer relationships and encouraged repeat purchases.</>,
         ],
         images: [
           {
@@ -371,17 +246,17 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
         name: "Kyrgyz-Russian Slavic University",
         description: (
           <>
-            <b>Master</b> of Science in Software Project Management
+            <b>Master's degree</b> in Software Project Management
             <br />
             <b>GPA:</b> 4.7 / 5,
             <br />
-            <b>Study Period:</b> 2020 – 2022.
+            <b>Study Period:</b> 2020–2022
           </>
         ),
       },
@@ -389,11 +264,11 @@ const about = {
         name: "Kyrgyz-Russian Slavic University",
         description: (
           <>
-            <b>Bachelor</b> of Science in Electronics and Nanoelectronics
+            <b>Bachelor's degree</b> in Electronics and Nanoelectronics
             <br />
-            <b>GPA:</b> 4.95 /5
+            <b>GPA:</b> 4.95 / 5
             <br />
-            <b>Study Period:</b> 2016 – 2020.
+            <b>Study Period:</b> 2016–2020
           </>
         ),
       },
@@ -401,12 +276,12 @@ const about = {
   },
   courses: {
     display: true, // set to false to hide this section
-    title: "Sertificates",
+    title: "Certificates",
     course: [{
         name: "Database Administrator (DBA)",
         description: (
           <>
-            Сompleted online training, offline testing and assessment, and received a certificate.
+            Completed database administration training and passed the certification assessment.
             <br />
             <b>Period:</b> April 2025 – May 2025.
           </>
@@ -422,7 +297,7 @@ const about = {
         name: "Python Developer",
         description: (
           <>
-            Completed a professional Python Developer course lasting 48 hours.
+            Completed a 48-hour course in Python development.
             <br />
             <b>Study Period:</b> March 2023 – April 2023.
           </>
@@ -438,7 +313,7 @@ const about = {
         name: "Basics of Angular",
         description: (
           <>
-            Completed a professional Python Developer course lasting 48 hours.
+            Completed training in Angular fundamentals.
             <br />
             <b>Study Period:</b> May 2023 – June 2023.
           </>
@@ -451,10 +326,10 @@ const about = {
         },],
       },
       {
-        name: "Comprehensive Vue.js Study",
+        name: "Vue.js Development",
         description: (
           <>
-            Completed a professional Python Developer course lasting 48 hours.
+            Completed training in Vue.js application development.
             <br />
             <b>Study Period:</b> July 2023 – August 2023.
           </>
@@ -469,10 +344,10 @@ const about = {
         ],
       },
       {
-        name: "Comprehensive React.js Study",
+        name: "React Development",
         description: (
           <>
-            Completed a professional Python Developer course lasting 48 hours.
+            Completed training in React application development.
             <br />
             <b>Study Period:</b> Sep 2023 – Oct 2023.
           </>
@@ -492,7 +367,7 @@ const about = {
     skills: [
       {
         title: "Figma",
-        description: <></>,
+        description: <>Interface design and prototyping.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -504,8 +379,8 @@ const about = {
         ],
       },
       {
-        title: "MYSQL",
-        description: <></>,
+        title: "MySQL",
+        description: <>SQL queries, stored procedures and database optimization.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -518,7 +393,7 @@ const about = {
       },
       {
         title: "Python",
-        description: <></>,
+        description: <>Backend development, automation and service integrations.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -531,7 +406,7 @@ const about = {
       },
       {
         title: "Bootstrap",
-        description: <></>,
+        description: <>Responsive layouts and interface components.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -544,7 +419,7 @@ const about = {
       },
       {
         title: "CSS",
-        description: <></>,
+        description: <>Responsive styling and layout.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -556,8 +431,8 @@ const about = {
         ],
       },
       {
-        title: "JS",
-        description: <></>,
+        title: "JavaScript",
+        description: <>Interactive interfaces and application logic.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -570,7 +445,7 @@ const about = {
       },
       {
         title: "HTML",
-        description: <></>,
+        description: <>Semantic page structure.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -582,8 +457,8 @@ const about = {
         ],
       },
       {
-        title: "LESS",
-        description: <></>,
+        title: "Less",
+        description: <>Reusable styles and CSS organization.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -595,8 +470,8 @@ const about = {
         ],
       },
       {
-        title: "NodeJs",
-        description: <></>,
+        title: "Node.js",
+        description: <>Server-side JavaScript development.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -608,21 +483,8 @@ const about = {
         ],
       },
       {
-        title: "Python",
-        description: <></>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/skills/python.png",
-            alt: "Python",
-            width: 100,
-            height: 100,
-          },
-        ],
-      },
-      {
         title: "Git",
-        description: <></>,
+        description: <>Version control and collaborative development.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -634,8 +496,8 @@ const about = {
         ],
       },
       {
-        title: "Github",
-        description: <></>,
+        title: "GitHub",
+        description: <>Repository management and code reviews.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -648,7 +510,7 @@ const about = {
       },
       {
         title: "Jira",
-        description: <></>,
+        description: <>Sprint planning and issue tracking.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -660,8 +522,8 @@ const about = {
         ],
       },
       {
-        title: "PS",
-        description: <></>,
+        title: "Photoshop",
+        description: <>Image editing and visual assets.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -674,7 +536,7 @@ const about = {
       },
       {
         title: "React",
-        description: <></>,
+        description: <>Component-based user interfaces.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -687,7 +549,7 @@ const about = {
       },
       {
         title: "Slack",
-        description: <></>,
+        description: <>Team communication and coordination.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -704,8 +566,8 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about developing and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Technology, explained",
+  description: `Articles and videos on software development, digital privacy and technology by ${person.name}.`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -713,15 +575,15 @@ const blog = {
 const work = {
   label: "Work",
   title: "My projects",
-  description: `Dev projects by ${person.name}`,
+  description: `Selected websites and software projects by ${person.name}.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
+  title: "Photo gallery",
+  description: `A selection of personal photographs by ${person.name}.`,
   // Images from https://pexels.com
   images: [
     {

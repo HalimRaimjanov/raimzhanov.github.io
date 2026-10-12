@@ -1,5 +1,6 @@
-import { Column, Flex, Heading } from "@/once-ui/components";
+import { Column, Heading, Text } from "@/once-ui/components";
 import { Mailchimp } from "@/components";
+import { Videos } from "@/components/blog/Videos";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL } from "@/app/resources";
 import { blog, person, newsletter } from "@/app/resources/content";
@@ -46,21 +47,26 @@ export default function Blog() {
             headline: blog.title,
             description: blog.description,
             url: `https://${baseURL}/blog`,
-            image: `${baseURL}/og?title=${encodeURIComponent(blog.title)}`,
+            image: `https://${baseURL}/og?title=${encodeURIComponent(blog.title)}`,
             author: {
               "@type": "Person",
               name: person.name,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
+                url: `https://${baseURL}${person.avatar}`,
               },
             },
           }),
         }}
       />
-      <Heading marginBottom="l" variant="display-strong-s">
+      <Heading marginBottom="m" variant="display-strong-s">
         {blog.title}
       </Heading>
+      <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="l">
+        Practical articles and videos on software development, digital privacy and everyday technology.
+      </Text>
+      <Videos />
+      <Heading as="h2" variant="heading-strong-xl" marginBottom="l">Articles</Heading>
       <Column fillWidth flex={1}>
         <Posts range={[1, 3]} thumbnail />
         <Posts range={[4]} columns="2" />

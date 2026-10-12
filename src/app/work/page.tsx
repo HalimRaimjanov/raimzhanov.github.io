@@ -1,5 +1,5 @@
 import { getPosts } from "@/app/utils/utils";
-import { Column } from "@/once-ui/components";
+import { Column, Heading, SmartLink, Text } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 import { baseURL } from "@/app/resources";
 import { person, work } from "@/app/resources/content";
@@ -34,7 +34,7 @@ export async function generateMetadata() {
 }
 
 export default function Work() {
-  let allProjects = getPosts(["src", "app", "work", "projects"]);
+  const allProjects = getPosts(["src", "app", "work", "projects"]);
 
   return (
     <Column maxWidth="m">
@@ -47,8 +47,8 @@ export default function Work() {
             "@type": "CollectionPage",
             headline: work.title,
             description: work.description,
-            url: `https://${baseURL}/projects`,
-            image: `${baseURL}/og?title=Design%20Projects`,
+            url: `https://${baseURL}/work`,
+            image: `https://${baseURL}/og?title=${encodeURIComponent(work.title)}`,
             author: {
               "@type": "Person",
               name: person.name,
@@ -57,12 +57,23 @@ export default function Work() {
               "@type": "CreativeWork",
               headline: project.metadata.title,
               description: project.metadata.summary,
-              url: `https://${baseURL}/projects/${project.slug}`,
-              image: `${baseURL}/${project.metadata.image}`,
+              url: `https://${baseURL}/work/${project.slug}`,
+              image: project.metadata.image || project.metadata.images[0]
+                ? new URL(project.metadata.image || project.metadata.images[0], `https://${baseURL}`).href
+                : undefined,
             })),
           }),
         }}
       />
+      <Column as="section" fillWidth gap="m" paddingX="l" marginBottom="40">
+        <Heading as="h2" variant="heading-strong-xl">Technology education</Heading>
+        <Text variant="body-default-m" onBackground="neutral-weak">
+          I also run a YouTube channel, explaining technology, digital privacy and online security.
+        </Text>
+        <SmartLink href="https://www.youtube.com/@HalimRaimzhan" suffixIcon="arrowUpRightFromSquare">
+          Visit my YouTube channel
+        </SmartLink>
+      </Column>
       <Projects />
     </Column>
   );

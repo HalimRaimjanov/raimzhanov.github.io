@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { cache } from "react";
 
 type Team = {
   name: string;
@@ -44,9 +45,9 @@ function readMDXFile(filePath: string) {
     summary: data.summary || "",
     image: data.image || "",
     images: data.images || [],
-    tag: data.tag || [],
+    tag: data.tag || "",
     team: data.team || [],
-    link: data.link || "",
+    link: Array.isArray(data.link) ? data.link[0] || "" : data.link || "",
   };
 
   return { metadata, content };
@@ -66,7 +67,9 @@ function getMDXData(dir: string) {
   });
 }
 
+const getCachedMDXData = cache(getMDXData);
+
 export function getPosts(customPath = ["", "", "", ""]) {
   const postsDir = path.join(process.cwd(), ...customPath);
-  return getMDXData(postsDir);
+  return getCachedMDXData(postsDir);
 }
