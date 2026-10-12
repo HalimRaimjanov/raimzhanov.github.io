@@ -1,5 +1,6 @@
 import { getPosts } from "@/app/utils/utils";
-import { Column, Heading, SmartLink, Text } from "@/once-ui/components";
+import { Column } from "@/once-ui/components";
+import { YouTubeChannel } from "@/components/work/YouTubeChannel";
 import { Projects } from "@/components/work/Projects";
 import { baseURL } from "@/app/resources";
 import { person, work } from "@/app/resources/content";
@@ -65,15 +66,7 @@ export default function Work() {
           }),
         }}
       />
-      <Column as="section" fillWidth gap="m" paddingX="l" marginBottom="40">
-        <Heading as="h2" variant="heading-strong-xl">Technology education</Heading>
-        <Text variant="body-default-m" onBackground="neutral-weak">
-          I also run a YouTube channel, explaining technology, digital privacy and online security.
-        </Text>
-        <SmartLink href="https://www.youtube.com/@HalimRaimzhan" suffixIcon="arrowUpRightFromSquare">
-          Visit my YouTube channel
-        </SmartLink>
-      </Column>
+      <YouTubeChannel />
       <Projects />
     </Column>
   );
