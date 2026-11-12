@@ -2,6 +2,16 @@ import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 import Script from 'next/script';
 
+import { headers } from 'next/headers';
+import { LanguagePicker } from '@/components/language/LanguagePicker';
+import { Header as EnglishHeader } from '@/locales/en/components/Header';
+import { Header as KyrgyzHeader } from '@/locales/ky/components/Header';
+import { Footer as EnglishFooter } from '@/locales/en/components/Footer';
+import { Footer as KyrgyzFooter } from '@/locales/ky/components/Footer';
+import { RouteGuard as EnglishGuard } from '@/locales/en/components/RouteGuard';
+import { RouteGuard as KyrgyzGuard } from '@/locales/ky/components/RouteGuard';
+import { home as englishHome } from '@/locales/en/app/resources/content';
+import { home as kyrgyzHome } from '@/locales/ky/app/resources/content';
 import classNames from "classnames";
 
 import { Footer, Header, RouteGuard } from "@/components";
@@ -14,16 +24,18 @@ import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
 export async function generateMetadata() {
+  const locale = headers().get('x-site-language') ?? 'ru';
+  const localizedHome = locale === 'en' ? englishHome : locale === 'ky' ? kyrgyzHome : home;
   return {
     metadataBase: new URL(`https://${baseURL}`),
-    title: home.title,
-    description: home.description,
+    title: localizedHome.title,
+    description: localizedHome.description,
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: home.description,
+      title: localizedHome.title,
+      description: localizedHome.description,
       url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
-      locale: "en_US",
+      siteName: localizedHome.title,
+      locale: locale === "en" ? "en_US" : locale === "ky" ? "ky_KG" : "ru_RU",
       type: "website",
     },
     robots: {
@@ -42,7 +54,7 @@ export async function generateMetadata() {
 
 const primary = Inter({
   variable: "--font-primary",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   display: "swap",
 });
 
@@ -61,7 +73,7 @@ const tertiary: FontConfig | undefined = undefined;
 
 const code = Source_Code_Pro({
   variable: "--font-code",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   display: "swap",
 });
 
@@ -70,10 +82,15 @@ interface RootLayoutProps {
 }
 
 export default async function RootLayout({ children }: RootLayoutProps) {
+  const language = headers().get('x-site-language');
+  const locale = language === 'en' || language === 'ky' ? language : 'ru';
+  const SiteHeader = locale === 'en' ? EnglishHeader : locale === 'ky' ? KyrgyzHeader : Header;
+  const SiteFooter = locale === 'en' ? EnglishFooter : locale === 'ky' ? KyrgyzFooter : Footer;
+  const SiteGuard = locale === 'en' ? EnglishGuard : locale === 'ky' ? KyrgyzGuard : RouteGuard;
   return (
     <Flex
       as="html"
-      lang="en"
+      lang={locale}
       background="page"
       data-neutral={style.neutral}
       data-brand={style.brand}
@@ -159,7 +176,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             }}
           />
           <Flex fillWidth minHeight="16"></Flex>
-          <Header />
+          <LanguagePicker locale={locale} />
+          <SiteHeader />
           <Flex
             position="relative"
             zIndex={0}
@@ -170,10 +188,10 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             flex={1}
           >
             <Flex horizontal="center" fillWidth minHeight="0">
-              <RouteGuard>{children}</RouteGuard>
+              <SiteGuard>{children}</SiteGuard>
             </Flex>
           </Flex>
-          <Footer />
+          <SiteFooter />
         </Column>
       </ToastProvider>
     </Flex>

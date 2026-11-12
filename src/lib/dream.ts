@@ -1,10 +1,12 @@
 export type Dream = {
-  title: string; description: string; target: number; saved: number;
+  title: string; description: string; titleEn?: string; descriptionEn?: string; titleKy?: string; descriptionKy?: string; target: number; saved: number;
   currency: string; exchangeRate: number | null; image: string; qr: string; donationUrl: string; updatedAt: string;
 };
 export const emptyDream: Dream = {
   title: 'Lixiang L7 · 2026',
   description: 'Моя мечта — Lixiang L7. Для новых дорог, долгих путешествий и моментов с близкими. Коплю на неё шаг за шагом.',
+  titleEn: 'Lixiang L7 · 2026', descriptionEn: 'My dream is a Lixiang L7. For new roads, long journeys and moments with loved ones. I am saving towards it, step by step.',
+  titleKy: 'Lixiang L7 · 2026', descriptionKy: 'Менин кыялым — Lixiang L7. Жаңы жолдор, узак сапарлар жана жакындарым менен өткөргөн көз ирмемдер үчүн. Ага кадам сайын каражат топтоп жатам.',
   target: 0, saved: 1, currency: 'KGS', exchangeRate: null, image: '/images/dreams/lixiang-l7.webp', qr: '', donationUrl: '', updatedAt: '',
 };
 export function validateDream(value: unknown): Dream {
@@ -15,12 +17,13 @@ export function validateDream(value: unknown): Dream {
   }
   if (!(d.title as string).trim() || !/^[A-Z]{3}$/.test(d.currency as string)) throw new Error('Укажите название и валюту');
   try { new Intl.NumberFormat('ru', { style: 'currency', currency: d.currency as string }); } catch { throw new Error('Некорректная валюта'); }
+  for (const key of ['titleEn', 'titleKy', 'descriptionEn', 'descriptionKy']) { if (d[key] !== undefined && (typeof d[key] !== 'string' || (d[key] as string).length > (key.startsWith('title') ? 100 : 1000))) throw new Error('Проверьте длину перевода'); }
   const exchangeRate = d.exchangeRate ?? null;
   if (exchangeRate !== null && (typeof exchangeRate !== 'number' || !Number.isFinite(exchangeRate) || exchangeRate < 0.0001 || exchangeRate > 1000000)) throw new Error('Курс должен быть от 0,0001 до 1 000 000 сомов за доллар');
   for (const key of ['saved', 'target']) if (typeof d[key] !== 'number' || !Number.isFinite(d[key]) || (d[key] as number) < 0 || (d[key] as number) > 1e12) throw new Error('Суммы должны быть от 0 до 1 триллиона');
   for (const key of ['image', 'qr']) if (d[key] && !(key === 'image' && d[key] === '/images/dreams/lixiang-l7.webp') && !/^data:image\/(png|jpeg|webp|gif);base64,[A-Za-z0-9+/=]+$/.test(d[key] as string)) throw new Error('Загрузите PNG, JPEG, WebP или GIF');
   if (d.donationUrl) { try { if (new URL(d.donationUrl as string).protocol !== 'https:') throw 0; } catch { throw new Error('Ссылка на оплату должна начинаться с https://'); } }
-  return { title: (d.title as string).trim(), description: d.description as string, target: d.target as number, saved: d.saved as number, currency: d.currency as string, exchangeRate, image: d.image as string, qr: d.qr as string, donationUrl: d.donationUrl as string, updatedAt: new Date().toISOString() };
+  return { titleEn: d.titleEn as string | undefined, titleKy: d.titleKy as string | undefined, descriptionEn: d.descriptionEn as string | undefined, descriptionKy: d.descriptionKy as string | undefined, title: (d.title as string).trim(), description: d.description as string, target: d.target as number, saved: d.saved as number, currency: d.currency as string, exchangeRate, image: d.image as string, qr: d.qr as string, donationUrl: d.donationUrl as string, updatedAt: new Date().toISOString() };
 }
 
 // Rate always means KGS per 1 USD; null keeps legacy records readable without inventing a rate.

@@ -63,7 +63,7 @@ export default function Gallery() {
       />
       <Column gap="s">
         <Heading as="h1" variant="display-strong-s">{gallery.title}</Heading>
-        <Text onBackground="neutral-weak">Personal moments, places, and portraits. Select a photo to view it in full.</Text>
+        <Text onBackground="neutral-weak">Моменты жизни, места и портреты. Нажмите на фотографию, чтобы открыть её целиком.</Text>
       </Column>
       <MasonryGrid />
     </Column>

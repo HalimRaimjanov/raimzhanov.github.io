@@ -9,12 +9,12 @@ export function YouTubeChannel() {
         href="https://www.youtube.com/@HalimRaimzhan"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Visit Khalim Raimzhanov's YouTube channel (opens in a new tab)"
+        aria-label="Открыть YouTube-канал Халима Раимжанова в новой вкладке"
       >
         <div className={styles.cover}>
           <Image
             src="/images/youtube/channel-cover.webp"
-            alt="Khalim Raimzhanov overlooking a mountain landscape"
+            alt="Халим Раимжанов на фоне гор"
             width={1600}
             height={900}
             sizes="(max-width: 960px) 100vw, 960px"
@@ -26,9 +26,9 @@ export function YouTubeChannel() {
           </span>
         </div>
         <div className={styles.details}>
-          <h2>Technology education</h2>
-          <p>I also run a YouTube channel, explaining technology, digital privacy and online security.</p>
-          <span className={styles.action}>Visit my YouTube channel <span aria-hidden="true">↗</span></span>
+          <h2>О технологиях простыми словами</h2>
+          <p>Я веду YouTube-канал, где рассказываю о технологиях, цифровой приватности и безопасности в интернете.</p>
+          <span className={styles.action}>Перейти на мой YouTube-канал <span aria-hidden="true">↗</span></span>
         </div>
       </a>
     </section>

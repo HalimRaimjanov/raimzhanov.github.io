@@ -37,7 +37,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
     setEmail(value);
 
     if (!validateEmail(value)) {
-      setError("Please enter a valid email address.");
+      setError("Введите корректный адрес электронной почты.");
     } else {
       setError("");
     }
@@ -48,7 +48,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
   const handleBlur = () => {
     setTouched(true);
     if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
+      setError("Введите корректный адрес электронной почты.");
     }
   };
 
@@ -144,7 +144,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
             id="mce-EMAIL"
             name="EMAIL"
             type="email"
-            label="Email"
+            label="Электронная почта"
             required
             onChange={(e) => {
               if (error) {
@@ -181,8 +181,8 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
           </div>
           <div className="clear">
             <Flex height="48" vertical="center">
-              <Button id="mc-embedded-subscribe" value="Subscribe" size="m" fillWidth>
-                Subscribe
+              <Button id="mc-embedded-subscribe" value="Подписаться" size="m" fillWidth>
+                Подписаться
               </Button>
             </Flex>
           </div>

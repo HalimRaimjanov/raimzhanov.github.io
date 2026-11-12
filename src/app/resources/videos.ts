@@ -9,58 +9,58 @@ export type VideoProject = {
 // Display order is the reverse of the links originally supplied.
 export const videoProjects: VideoProject[] = [
   {
-    "title": "How VPNs work",
-    "description": "How VPNs route your traffic and where their privacy protection ends.",
+    "title": "Как работает VPN",
+    "description": "Как VPN перенаправляет трафик и где заканчивается защита приватности.",
     "youtubeUrl": "https://youtu.be/PnQC3cD7DJ0"
   },
   {
-    "title": "Where deleted photos remain",
-    "description": "Why copies can remain in cloud storage, trash folders, and messaging apps.",
+    "title": "Где остаются удалённые фотографии",
+    "description": "Почему копии остаются в облаке, корзине и мессенджерах.",
     "youtubeUrl": "https://youtu.be/o18fbtLc0UY"
   },
   {
-    "title": "How websites recognize visitors",
-    "description": "How cookies, accounts, and browser fingerprints identify returning visitors.",
+    "title": "Как сайты узнают посетителей",
+    "description": "Как cookie, учётные записи и цифровые отпечатки браузера помогают узнавать посетителей.",
     "youtubeUrl": "https://youtu.be/E6_PB6vRx9I"
   },
   {
-    "title": "How retargeting works",
-    "description": "How browsing activity influences the ads you see later.",
+    "title": "Как работает ретаргетинг",
+    "description": "Как история посещений влияет на рекламу, которую мы видим.",
     "youtubeUrl": "https://youtu.be/wyMBd-CjXWQ"
   },
   {
-    "title": "Recognizing phishing websites",
-    "description": "Warning signs of fake websites and what to do if your login details are exposed.",
+    "title": "Как распознать фишинговый сайт",
+    "description": "Признаки поддельных сайтов и действия при утечке данных для входа.",
     "youtubeUrl": "https://youtu.be/dnHSfrF5Ips"
   },
   {
-    "title": "What your phone number reveals",
-    "description": "How phone numbers connect to personal information and ways to reduce your digital footprint.",
+    "title": "Что о вас рассказывает номер телефона",
+    "description": "Как номер связан с личными данными и как уменьшить цифровой след.",
     "youtubeUrl": "https://youtu.be/JrMenq9GFD4"
   },
   {
-    "title": "App permissions and personal data",
-    "description": "What information apps can access and how to manage their permissions.",
+    "title": "Разрешения приложений и личные данные",
+    "description": "К каким данным получают доступ приложения и как управлять разрешениями.",
     "youtubeUrl": "https://youtu.be/GXAmO749Nzk"
   },
   {
-    "title": "How Face ID works",
-    "description": "How facial recognition works, protects biometric data, and handles its limitations.",
+    "title": "Как работает Face ID",
+    "description": "Как распознавание лица защищает биометрические данные и какие у него ограничения.",
     "youtubeUrl": "https://youtu.be/akEQFrr2oKk"
   },
   {
-    "title": "Location tracking without GPS",
-    "description": "How Wi-Fi, mobile networks, Bluetooth, and IP addresses reveal location.",
+    "title": "Определение местоположения без GPS",
+    "description": "Как Wi-Fi, мобильные сети, Bluetooth и IP-адрес раскрывают местоположение.",
     "youtubeUrl": "https://youtu.be/-ejJzDIYqrQ"
   },
   {
-    "title": "AI voice impersonation",
-    "description": "How to recognize a cloned voice and protect yourself from phone scams.",
+    "title": "Подделка голоса с помощью ИИ",
+    "description": "Как распознать поддельный голос и защититься от телефонного мошенничества.",
     "youtubeUrl": "https://youtu.be/8vF5l9XkBdc"
   },
   {
-    "title": "How search engines and AI choose answers",
-    "description": "How search engines select information and AI systems generate responses.",
+    "title": "Как поисковики и ИИ выбирают ответы",
+    "description": "Как поисковые системы отбирают информацию, а ИИ формирует ответы.",
     "youtubeUrl": "https://youtu.be/qucXVq6B6Ao"
   }
 ];

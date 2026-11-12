@@ -43,7 +43,7 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
 export default TimeDisplay;
 
 export const Header = () => {
-  const pathname = usePathname() ?? "";
+  const pathname = (usePathname() ?? "").replace(/^\/(en|ky)(?=\/|$)/, "") || "/";
 
   return (
     <>
@@ -127,7 +127,10 @@ export const Header = () => {
                 </>
               )}
               {routes["/dreams"] && (
-                <ToggleButton prefixIcon="dream" href="/dreams" label="Мечты" selected={pathname === "/dreams"} />
+                <>
+                  <ToggleButton className="s-flex-hide" prefixIcon="dream" href="/dreams" label="Мечты" selected={pathname === "/dreams"} />
+                  <ToggleButton className="s-flex-show" prefixIcon="dream" href="/dreams" aria-label="Мечты" selected={pathname === "/dreams"} />
+                </>
               )}
               {routes["/gallery"] && (
                 <>
@@ -157,7 +160,7 @@ export const Header = () => {
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+            <Flex hide="s" style={{ marginRight: "96px" }}>{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
           </Flex>
         </Flex>
       </Flex>

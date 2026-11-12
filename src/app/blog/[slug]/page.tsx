@@ -98,7 +98,7 @@ export default function Blog({ params }: BlogParams) {
         }}
       />
       <Button href="/blog" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
-        Posts
+        Статьи
       </Button>
       <Heading variant="display-strong-s">{post.metadata.title}</Heading>
       <Row gap="12" vertical="center">

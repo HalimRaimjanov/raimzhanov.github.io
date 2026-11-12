@@ -164,7 +164,7 @@ export default function About() {
                   name="calendar"
                   onBackground="brand-weak"
                 />
-                <Flex paddingX="8">Let’s Connect</Flex>
+                <Flex paddingX="8">Связаться со мной</Flex>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"

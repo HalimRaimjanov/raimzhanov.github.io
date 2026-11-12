@@ -36,7 +36,7 @@ export default function Post({ post, thumbnail }: PostProps) {
             cursor="interactive"
             radius="m"
             src={post.metadata.image}
-            alt={"Thumbnail of " + post.metadata.title}
+            alt={"Обложка: " + post.metadata.title}
             aspectRatio="16 / 9"
           />
         )}

@@ -1,23 +1,23 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Khalim",
-  lastName: "Raimzhanov",
+  firstName: "Халим",
+  lastName: "Раимжанов",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Full Stack Developer",
+  role: "Fullstack-разработчик",
   avatar: "/images/avatar.jpg",
   location: "Asia/Bishkek", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Kyrgyz", "Russian", "Uzbek", "Tajik", "Turkish"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Английский", "Кыргызский", "Русский", "Узбекский", "Таджикский", "Турецкий"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: false,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Подписаться на рассылку · {person.firstName}</>,
   description: (
     <>
-      Occasional notes on software development, architecture and technology.
+      Заметки о разработке, архитектуре и технологиях.
     </>
   ),
 };
@@ -41,29 +41,29 @@ const social = [
     link: "https://www.instagram.com/halim_raimjanov?igsh=MTVoOWZydmxpazN5cA%3D%3D&utm_source=qr",
   },
   {
-    name: "Email",
+    name: "Почта",
     icon: "email",
     link: "mailto:halimjonraimjanov@gmail.com",
   },
 ];
 
 const home = {
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Software projects, technical articles and videos by ${person.name}, ${person.role}.`,
-  headline: <>Full Stack Developer & Team Lead</>,
+  label: "Главная",
+  title: `Портфолио · ${person.name}`,
+  description: `Проекты, статьи и видео о технологиях. ${person.name}, ${person.role}.`,
+  headline: <>Fullstack-разработчик и руководитель команды</>,
   subline: (
     <>
-      I'm Khalim, a Team Lead at <InlineCode>MBulak</InlineCode>.
-      I build financial software, review code and guide teams from planning to delivery.
+      Я Халим, руковожу командой разработки в <InlineCode>MBulak</InlineCode>.
+      Создаю финансовое ПО, проверяю код и веду команду от планирования до выпуска продукта.
     </>
   ),
 };
 
 const about = {
-  label: "About",
-  title: "About me",
-  description: `${person.name}: software engineering, team leadership, education and technical skills.`,
+  label: "Обо мне",
+  title: "Обо мне",
+  description: `${person.name}: разработка ПО, руководство командой, образование и технические навыки.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -77,34 +77,34 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Знакомство",
     description: (
       <>
-        I lead software development at MBulak, with a focus on financial services,
-        backend systems and databases. My work combines technical planning,
-        code reviews and team development to deliver reliable, maintainable software.
+        Руковожу разработкой ПО в MBulak: финансовыми сервисами, серверными системами
+        и базами данных. Занимаюсь техническим планированием, проверкой кода
+        и развитием команды, чтобы создавать надёжные и удобные в поддержке продукты.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Опыт работы",
     experiences: [
       {
         company: "MBulak",
-        timeframe: "Sep 2024 - Present",
-        role: "Team Lead",
+        timeframe: "сент. 2024 - настоящее время",
+        role: "Руководитель команды",
         achievements: [
-          <>Lead development of financial software and plan delivery with the engineering team.</>,
-          <>Review code and assess architecture, performance and maintainability.</>,
-          <>Coordinate sprints, priorities and issue tracking in Jira.</>,
-          <>Support engineers and improve development workflows.</>,
+          <>Руковожу разработкой финансового ПО и планирую работу команды.</>,
+          <>Проверяю код, оцениваю архитектуру, производительность и удобство поддержки.</>,
+          <>Координирую спринты, приоритеты и задачи в Jira.</>,
+          <>Помогаю разработчикам и совершенствую рабочие процессы.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/cover.png",
-            alt: "Mbulak Website",
+            alt: "Сайт MBulak",
             width: 18,
             height: 9,
           },
@@ -112,12 +112,12 @@ const about = {
       },
       {
         company: "MBulak",
-        timeframe: "Sep 2023 - Sep 2024",
-        role: "Senior Software Engineer",
+        timeframe: "сент. 2023 - сент. 2024",
+        role: "Старший разработчик",
         achievements: [
-          <>Developed backend services and SQL procedures for financial products.</>,
-          <>Integrated Tunduk and external services using Python.</>,
-          <>Optimized database queries and backend architecture.</>,
+          <>Разрабатывал серверные сервисы и SQL-процедуры для финансовых продуктов.</>,
+          <>Интегрировал Тундук и внешние сервисы с помощью Python.</>,
+          <>Оптимизировал запросы к базе данных и серверную архитектуру.</>,
         ],
         images: [
           {
@@ -130,12 +130,12 @@ const about = {
       },
       {
         company: "MBulak",
-        timeframe: "Sep 2022 - Sep 2023",
-        role: "Middle Software Engineer",
+        timeframe: "сент. 2022 - сент. 2023",
+        role: "Разработчик",
         achievements: [
-          <>Built SQL procedures for financial calculations and reporting.</>,
-          <>Developed Python integrations with financial and government services.</>,
-          <>Optimized queries and collaborated on backend development.</>,
+          <>Создавал SQL-процедуры для финансовых расчётов и отчётности.</>,
+          <>Разрабатывал интеграции с финансовыми и государственными сервисами на Python.</>,
+          <>Оптимизировал запросы и участвовал в серверной разработке.</>,
         ],
         images: [
           {
@@ -148,12 +148,12 @@ const about = {
       },
       {
         company: "MBulak",
-        timeframe: "July 2021 - Sep 2022",
-        role: "Junior Software Engineer",
+        timeframe: "июль 2021 - сент. 2022",
+        role: "Младший разработчик",
         achievements: [
-          <>Developed SQL procedures for transactions and reporting.</>,
-          <>Supported Python integrations and API development.</>,
-          <>Investigated defects and contributed to backend improvements.</>,
+          <>Разрабатывал SQL-процедуры для транзакций и отчётности.</>,
+          <>Поддерживал интеграции на Python и разрабатывал API.</>,
+          <>Разбирался с ошибками и улучшал серверную часть.</>,
         ],
         images: [
           {
@@ -166,12 +166,12 @@ const about = {
       },
       {
         company: "MBulak",
-        timeframe: "Mar 2021 - July 2021",
-        role: "Intern",
+        timeframe: "март 2021 - июль 2021",
+        role: "Стажёр",
         achievements: [
-          <>Supported backend development and financial data processing.</>,
-          <>Wrote SQL queries and stored procedures under supervision.</>,
-          <>Practised debugging and code maintenance.</>,
+          <>Помогал в серверной разработке и обработке финансовых данных.</>,
+          <>Писал SQL-запросы и хранимые процедуры под руководством наставника.</>,
+          <>Учился отладке и сопровождению кода.</>,
         ],
         images: [
           {
@@ -184,17 +184,17 @@ const about = {
       },
       {
         company: "MBulak",
-        timeframe: "Apr 2020 - Mar 2021",
-        role: "Senior Call Center Operator",
+        timeframe: "апр. 2020 - март 2021",
+        role: "Старший оператор колл-центра",
         achievements: [
-          <>Supervised call centre operators and trained new staff.</>,
-          <>Resolved escalated customer requests.</>,
-          <>Improved call scripts and service workflows.</>,
+          <>Координировал работу операторов и обучал новых сотрудников.</>,
+          <>Решал сложные обращения клиентов.</>,
+          <>Улучшал сценарии разговоров и процессы обслуживания.</>,
         ],
         images: [
           {
             src: "/images/callcenter.png",
-            alt: "Callcenter",
+            alt: "Колл-центр",
             width: 16,
             height: 9,
           },
@@ -202,17 +202,17 @@ const about = {
       },
       {
         company: "MBulak",
-        timeframe: "Sep 2018 - Apr 2020",
-        role: "Call Center Operator",
+        timeframe: "сент. 2018 - апр. 2020",
+        role: "Оператор колл-центра",
         achievements: [
-          <>Assisted customers with financial services and loan applications.</>,
-          <>Processed requests and maintained customer records.</>,
-          <>Resolved enquiries and customer disputes.</>,
+          <>Консультировал клиентов по финансовым услугам и заявкам на кредит.</>,
+          <>Обрабатывал обращения и вёл клиентские записи.</>,
+          <>Отвечал на вопросы и разрешал спорные ситуации.</>,
         ],
         images: [
           {
             src: "/images/callcenter.png",
-            alt: "Callcenter",
+            alt: "Колл-центр",
             width: 16,
             height: 9,
           },
@@ -220,12 +220,12 @@ const about = {
       },
       {
         company: "S Parfum",
-        timeframe: "Aug 2017 - Sep 2018",
-        role: "Sales Associate",
+        timeframe: "авг. 2017 - сент. 2018",
+        role: "Продавец-консультант",
         achievements: [
-          <>Advised customers on fragrances and supported sales.</>,
-          <>Maintained product displays and store presentation.</>,
-          <>Built customer relationships and encouraged repeat purchases.</>,
+          <>Помогал покупателям выбирать ароматы и сопровождал продажи.</>,
+          <>Оформлял витрины и следил за презентацией товаров.</>,
+          <>Выстраивал отношения с клиентами и помогал им возвращаться за покупками.</>,
         ],
         images: [
           {
@@ -246,29 +246,29 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Education",
+    title: "Образование",
     institutions: [
       {
-        name: "Kyrgyz-Russian Slavic University",
+        name: "Кыргызско-Российский Славянский университет",
         description: (
           <>
-            <b>Master's degree</b> in Software Project Management
+            <b>Магистратура</b> по управлению программными проектами
             <br />
-            <b>GPA:</b> 4.7 / 5,
+            <b>Средний балл:</b> 4.7 / 5,
             <br />
-            <b>Study Period:</b> 2020–2022
+            <b>Период обучения:</b> 2020–2022
           </>
         ),
       },
       {
-        name: "Kyrgyz-Russian Slavic University",
+        name: "Кыргызско-Российский Славянский университет",
         description: (
           <>
-            <b>Bachelor's degree</b> in Electronics and Nanoelectronics
+            <b>Бакалавриат</b> по электронике и наноэлектронике
             <br />
-            <b>GPA:</b> 4.95 / 5
+            <b>Средний балл:</b> 4.95 / 5
             <br />
-            <b>Study Period:</b> 2016–2020
+            <b>Период обучения:</b> 2016–2020
           </>
         ),
       },
@@ -276,14 +276,14 @@ const about = {
   },
   courses: {
     display: true, // set to false to hide this section
-    title: "Certificates",
+    title: "Сертификаты",
     course: [{
-        name: "Database Administrator (DBA)",
+        name: "Администратор баз данных (DBA)",
         description: (
           <>
-            Completed database administration training and passed the certification assessment.
+            Прошёл обучение администрированию баз данных и сдал сертификационный экзамен.
             <br />
-            <b>Period:</b> April 2025 – May 2025.
+            <b>Период:</b> апрель 2025 – май 2025.
           </>
         ),
         images: [{
@@ -294,12 +294,12 @@ const about = {
         },],
       },
       {
-        name: "Python Developer",
+        name: "Разработчик Python",
         description: (
           <>
-            Completed a 48-hour course in Python development.
+            Прошёл 48-часовой курс разработки на Python.
             <br />
-            <b>Study Period:</b> March 2023 – April 2023.
+            <b>Период обучения:</b> март 2023 – апрель 2023.
           </>
         ),
         images: [{
@@ -310,12 +310,12 @@ const about = {
         },],
       },
       {
-        name: "Basics of Angular",
+        name: "Основы Angular",
         description: (
           <>
-            Completed training in Angular fundamentals.
+            Прошёл обучение основам Angular.
             <br />
-            <b>Study Period:</b> May 2023 – June 2023.
+            <b>Период обучения:</b> май 2023 – июнь 2023.
           </>
         ),
         images: [{
@@ -326,12 +326,12 @@ const about = {
         },],
       },
       {
-        name: "Vue.js Development",
+        name: "Разработка на Vue.js",
         description: (
           <>
-            Completed training in Vue.js application development.
+            Прошёл обучение разработке приложений на Vue.js.
             <br />
-            <b>Study Period:</b> July 2023 – August 2023.
+            <b>Период обучения:</b> июль 2023 – август 2023.
           </>
         ),
         images: [
@@ -344,12 +344,12 @@ const about = {
         ],
       },
       {
-        name: "React Development",
+        name: "Разработка на React",
         description: (
           <>
-            Completed training in React application development.
+            Прошёл обучение разработке приложений на React.
             <br />
-            <b>Study Period:</b> Sep 2023 – Oct 2023.
+            <b>Период обучения:</b> сент. 2023 – окт. 2023.
           </>
         ),
         images: [{
@@ -363,11 +363,11 @@ const about = {
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Технические навыки",
     skills: [
       {
         title: "Figma",
-        description: <>Interface design and prototyping.</>,
+        description: <>Дизайн интерфейсов и прототипирование.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -380,7 +380,7 @@ const about = {
       },
       {
         title: "MySQL",
-        description: <>SQL queries, stored procedures and database optimization.</>,
+        description: <>SQL-запросы, хранимые процедуры и оптимизация баз данных.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -393,7 +393,7 @@ const about = {
       },
       {
         title: "Python",
-        description: <>Backend development, automation and service integrations.</>,
+        description: <>Серверная разработка, автоматизация и интеграция сервисов.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -406,7 +406,7 @@ const about = {
       },
       {
         title: "Bootstrap",
-        description: <>Responsive layouts and interface components.</>,
+        description: <>Адаптивная вёрстка и компоненты интерфейса.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -419,7 +419,7 @@ const about = {
       },
       {
         title: "CSS",
-        description: <>Responsive styling and layout.</>,
+        description: <>Адаптивное оформление и вёрстка.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -432,7 +432,7 @@ const about = {
       },
       {
         title: "JavaScript",
-        description: <>Interactive interfaces and application logic.</>,
+        description: <>Интерактивные интерфейсы и логика приложений.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -445,7 +445,7 @@ const about = {
       },
       {
         title: "HTML",
-        description: <>Semantic page structure.</>,
+        description: <>Семантическая структура страниц.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -458,7 +458,7 @@ const about = {
       },
       {
         title: "Less",
-        description: <>Reusable styles and CSS organization.</>,
+        description: <>Переиспользуемые стили и организация CSS.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -471,7 +471,7 @@ const about = {
       },
       {
         title: "Node.js",
-        description: <>Server-side JavaScript development.</>,
+        description: <>Серверная разработка на JavaScript.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -484,7 +484,7 @@ const about = {
       },
       {
         title: "Git",
-        description: <>Version control and collaborative development.</>,
+        description: <>Контроль версий и совместная разработка.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -497,7 +497,7 @@ const about = {
       },
       {
         title: "GitHub",
-        description: <>Repository management and code reviews.</>,
+        description: <>Управление репозиториями и проверка кода.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -510,7 +510,7 @@ const about = {
       },
       {
         title: "Jira",
-        description: <>Sprint planning and issue tracking.</>,
+        description: <>Планирование спринтов и управление задачами.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -523,7 +523,7 @@ const about = {
       },
       {
         title: "Photoshop",
-        description: <>Image editing and visual assets.</>,
+        description: <>Редактирование изображений и создание графики.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -536,7 +536,7 @@ const about = {
       },
       {
         title: "React",
-        description: <>Component-based user interfaces.</>,
+        description: <>Пользовательские интерфейсы на основе компонентов.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -549,7 +549,7 @@ const about = {
       },
       {
         title: "Slack",
-        description: <>Team communication and coordination.</>,
+        description: <>Общение и координация команды.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -565,114 +565,114 @@ const about = {
 };
 
 const blog = {
-  label: "Blog",
-  title: "Technology, explained",
-  description: `Articles and videos on software development, digital privacy and technology by ${person.name}.`,
+  label: "Блог",
+  title: "О технологиях простыми словами",
+  description: `Статьи и видео о разработке, цифровой приватности и технологиях. Автор — ${person.name}.`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work = {
-  label: "Work",
-  title: "My projects",
-  description: `Selected websites and software projects by ${person.name}.`,
+  label: "Проекты",
+  title: "Мои проекты",
+  description: `Избранные сайты и программные проекты. Автор — ${person.name}.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
-  label: "Gallery",
-  title: "Photo gallery",
-  description: `A selection of personal photographs by ${person.name}.`,
+  label: "Галерея",
+  title: "Фотогалерея",
+  description: `Личные фотографии: ${person.name}.`,
   images: [
     {
       src: "/images/gallery/lake-portrait.webp",
-      alt: "Halim on a boat beside the lake",
+      alt: "Халим в лодке на озере",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/interior-portrait.webp",
-      alt: "Halim in a marble atrium",
+      alt: "Халим в мраморном атриуме",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/event-portrait.webp",
-      alt: "Halim at an MBulak event",
+      alt: "Халим на мероприятии MBulak",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/suit-portrait.webp",
-      alt: "Halim in a black suit beside a white car",
+      alt: "Халим в чёрном костюме у белого автомобиля",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/portrait-portrait.webp",
-      alt: "Portrait of Halim against a dark background",
+      alt: "Портрет Халима на тёмном фоне",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-01.jpg",
-      alt: "Personal photograph 06",
+      alt: "Личная фотография 06",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-02.jpg",
-      alt: "Personal photograph 07",
+      alt: "Личная фотография 07",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-03.jpg",
-      alt: "Personal photograph 08",
+      alt: "Личная фотография 08",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-04.jpg",
-      alt: "Personal photograph 09",
+      alt: "Личная фотография 09",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-05.jpg",
-      alt: "Personal photograph 10",
+      alt: "Личная фотография 10",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-06.jpg",
-      alt: "Personal photograph 11",
+      alt: "Личная фотография 11",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-07.jpg",
-      alt: "Personal photograph 12",
+      alt: "Личная фотография 12",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-08.jpg",
-      alt: "Personal photograph 13",
+      alt: "Личная фотография 13",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-10.jpg",
-      alt: "Personal photograph 14",
+      alt: "Личная фотография 14",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-11.jpg",
-      alt: "Personal photograph 15",
+      alt: "Личная фотография 15",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-12.jpg",
-      alt: "Personal photograph 16",
+      alt: "Личная фотография 16",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-13.jpg",
-      alt: "Personal photograph 17",
+      alt: "Личная фотография 17",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-14.jpg",
-      alt: "Personal photograph 18",
+      alt: "Личная фотография 18",
       orientation: "horizontal",
     },
   ],

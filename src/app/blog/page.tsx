@@ -63,10 +63,10 @@ export default function Blog() {
         {blog.title}
       </Heading>
       <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="l">
-        Practical articles and videos on software development, digital privacy and everyday technology.
+        Статьи и видео о разработке, цифровой приватности и повседневных технологиях.
       </Text>
       <Videos />
-      <Heading as="h2" variant="heading-strong-xl" marginBottom="l">Articles</Heading>
+      <Heading as="h2" variant="heading-strong-xl" marginBottom="l">Статьи</Heading>
       <Column fillWidth flex={1}>
         <Posts range={[1, 3]} thumbnail />
         <Posts range={[4]} columns="2" />

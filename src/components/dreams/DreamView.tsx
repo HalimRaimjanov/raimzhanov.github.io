@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Dream, convertDreamAmount } from '@/lib/dream';
+import { Column, Heading, Text } from '@/once-ui/components';
 import styles from './Dreams.module.scss';
 export function DreamView({ initial, live = false }: { initial: Dream; live?: boolean }) {
   const [dream, setDream] = useState(initial);
@@ -20,12 +21,15 @@ export function DreamView({ initial, live = false }: { initial: Dream; live?: bo
   const equivalent = (n: number) => { const amount = convertDreamAmount(n, dream.currency, otherCurrency, dream.exchangeRate); return amount === null ? null : `≈ ${format(amount, otherCurrency)}`; };
   const remaining = Math.max(0, dream.target - dream.saved);
   const percent = dream.target ? Math.min(100, dream.saved / dream.target * 100) : 0;
-  return <div className={styles.page} lang="ru">
-    <header className={styles.intro}><span className={styles.eyebrow}>ЛИЧНОЕ / ТО, ЧТО ВДОХНОВЛЯЕТ</span><h1>Мечты становятся<br /><em>ближе.</em></h1><p>У каждой большой мечты есть первый шаг.<br />Здесь я делюсь своей целью и дорогой к ней.</p></header>
+  return <Column maxWidth="m" fillWidth className={styles.page} lang="ru">
+    <Column fillWidth gap="m" marginBottom="l">
+      <Heading as="h1" variant="display-strong-s">Мечты</Heading>
+      <Text variant="body-default-m" onBackground="neutral-weak">У каждой большой мечты есть первый шаг. Здесь я делюсь своей целью и дорогой к ней.</Text>
+    </Column>
     <article className={styles.card}>
       <div className={styles.visual}><span className={styles.tag}>↗ МОЯ СЛЕДУЮЩАЯ ЦЕЛЬ</span>
         {dream.image ? <img src={dream.image} alt={dream.title} className={styles.heroImage} /> : <div className={styles.orbit} aria-hidden="true"><div /><span>✦</span></div>}
-        <div className={styles.visualCaption}><span>01 / DREAM IN PROGRESS</span><span>Маленькими шагами к большому</span></div>
+        <div className={styles.visualCaption}><span>01 / НА ПУТИ К МЕЧТЕ</span><span>Маленькими шагами к большому</span></div>
       </div>
       <div className={styles.details}><span className={styles.eyebrow}>НЕ ПРОСТО ВЕЩЬ. ЛИЧНАЯ ЦЕЛЬ.</span><h2>{dream.title}</h2><p>{dream.description}</p>
         <div className={styles.numbers}><div><span>Уже накоплено</span><strong>{money(dream.saved)}</strong><small className={styles.equivalent}>{equivalent(dream.saved) ?? 'Пересчёт появится после указания курса'}</small></div><div><span>Моя цель</span><b>{dream.target ? money(dream.target) : 'Уточняю стоимость'}</b>{dream.target > 0 && <small className={styles.equivalent}>{equivalent(dream.target)}</small>}</div></div>
@@ -38,5 +42,5 @@ export function DreamView({ initial, live = false }: { initial: Dream; live?: bo
     <section className={styles.support}><div><span className={styles.eyebrow}>НЕМНОГО ДОБРОТЫ — БОЛЬШОЙ ШАГ</span><h2>Стать частью мечты<span>↗</span></h2><p>Если вам близко то, что я делаю, можно поддержать мою цель. Любая сумма — это ещё один шаг вперёд.</p><span className={styles.thanks}>♡ Спасибо, что вы рядом.</span></div>
       <div className={styles.qr}>{dream.qr ? <><a href={dream.qr} download="donation-qr.png" aria-label="Скачать QR-код для поддержки"><img src={dream.qr} alt="QR-код для перевода" /></a><span>Отсканируйте в приложении банка</span><a href={dream.qr} download="donation-qr.png">Скачать QR-код ↓</a></> : <><div className={styles.qrEmpty} aria-hidden="true">♡</div><span>QR-код скоро появится</span></>}{dream.donationUrl && <a className={styles.button} href={dream.donationUrl} target="_blank" rel="noopener noreferrer">Поддержать мечту ↗</a>}</div>
     </section><p className={styles.footnote}>Поддержка добровольная. Это подарок на личную мечту, без встречных обязательств.</p>
-  </div>;
+  </Column>;
 }

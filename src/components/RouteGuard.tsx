@@ -19,7 +19,7 @@ function isEnabled(pathname: string | null) {
 }
 
 const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
-  const pathname = usePathname();
+  const pathname = (usePathname() ?? "/").replace(/^\/(en|ky)(?=\/|$)/, "") || "/";
   const isRouteEnabled = isEnabled(pathname);
   const isPasswordRequired = Boolean(pathname && protectedRoutes[pathname as keyof typeof protectedRoutes]);
   const [password, setPassword] = useState("");
@@ -60,10 +60,10 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
         setAuthenticatedPath(pathname);
         setError(undefined);
       } else {
-        setError("Incorrect password");
+        setError("Неверный пароль");
       }
     } catch {
-      setError("Unable to sign in. Please try again.");
+      setError("Не удалось войти. Попробуйте ещё раз.");
     }
   };
 
@@ -83,16 +83,16 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
   if (authenticatedPath !== pathname) {
     return (
       <Column paddingY="128" maxWidth={24} gap="24" center>
-        <Heading align="center" wrap="balance">This page is password protected</Heading>
+        <Heading align="center" wrap="balance">Эта страница защищена паролем</Heading>
         <Column fillWidth gap="8" horizontal="center">
           <PasswordInput
             id="password"
-            label="Password"
+            label="Пароль"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             errorMessage={error}
           />
-          <Button onClick={handlePasswordSubmit}>Submit</Button>
+          <Button onClick={handlePasswordSubmit}>Войти</Button>
         </Column>
       </Column>
     );
