@@ -26,7 +26,7 @@ export function DreamAdmin() {
   }
   const field = (key: keyof Dream, value: string | number) => setDream(d => ({ ...d, [key]: value }));
   if (loading) return <div className={styles.admin}>Жүктөлүүдө…</div>;
-  return <div className={styles.admin} lang="ky"><span className={styles.eyebrow}>ЖЕКЕ КАБИНЕТ</span><h1>Кыялды башкаруу</h1><p>Сумманы жана жасалгалоону өзгөртүңүз. Сактагандан кийин өзгөртүүлөр бардык конокторго көрүнөт.</p>
+  return <div className={styles.admin} lang="ky"><span className={styles.eyebrow}>ЖЕКЕ КАБИНЕТ</span><nav className={styles.actions}><a href="/admin/blog">Блог</a><a href="/admin/work">Долбоорлор</a><a href="/admin/dreams" aria-current="page">Кыял</a></nav><h1>Кыялды башкаруу</h1><p>Сумманы жана жасалгалоону өзгөртүңүз. Сактагандан кийин өзгөртүүлөр бардык конокторго көрүнөт.</p>
     {message && <div className={styles.message} role="status">{message}</div>}
     {!auth ? <form onSubmit={login}><label>Администратордун сырсөзү<input type="password" autoComplete="current-password" required value={password} onChange={e => setPassword(e.target.value)} maxLength={512} /></label><button disabled={busy} className={styles.button}>{busy ? 'Кирүүдө…' : 'Кирүү'}</button></form> : <><form onSubmit={save}>
       <label>Кыялдын аталышы<input required maxLength={100} value={dream.title} onChange={e => field('title', e.target.value)} /></label>

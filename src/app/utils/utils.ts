@@ -1,27 +1,6 @@
-import catalog from "@/generated/content.json";
-type Team = {
-  name: string;
-  role: string;
-  avatar: string;
-  linkedIn: string;
-};
-
-type Metadata = {
-  title: string;
-  publishedAt: string;
-  summary: string;
-  image?: string;
-  images: string[];
-  tag?: string;
-  team: Team[];
-  link?: string;
-};
-
-type Post = { metadata: Metadata; slug: string; content: string };
-// Imported JSON is included in serverless bundles; no runtime source-file access.
-export function getPosts(customPath = ["", "", "", ""]): Post[] {
-  const section = customPath.slice(-2).join("/");
-  const localized = catalog["ru"] as Record<string, Post[]>;
-  if (!(section in localized)) throw new Error(`Unknown content section: ${section}`);
-  return localized[section];
+import { getContent } from '@/lib/content-server';
+export async function getPosts(customPath = ['', '', '', '']) {
+ const section = customPath.slice(-2).join('/');
+ if (section !== 'blog/posts' && section !== 'work/projects') throw new Error('Unknown content section');
+ return getContent('ru', section === 'blog/posts' ? 'blog' : 'work');
 }

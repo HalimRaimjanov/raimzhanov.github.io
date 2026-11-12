@@ -1,7 +1,9 @@
+import { safeJson } from '@/lib/safe-json';
+import { ManagedContent } from '@/components/ManagedContent';
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/locales/ky/components/mdx";
 import { getPosts } from "@/locales/ky/app/utils/utils";
-import { AvatarGroup, Button, Column, Heading, Row, Text } from "@/once-ui/components";
+import { AvatarGroup, Button, Column, Heading, Row, SmartImage, Text } from "@/once-ui/components";
 import { baseURL } from "@/locales/ky/app/resources";
 import { person } from "@/locales/ky/app/resources/content";
 import { formatDate } from "@/locales/ky/app/utils/formatDate";
@@ -13,15 +15,10 @@ interface BlogParams {
   };
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "blog", "posts"]);
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params: { slug } }: BlogParams) {
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slug);
+export async function generateMetadata({ params: { slug } }: BlogParams) {
+  let post = (await getPosts(["src", "app", "blog", "posts"])).find((post) => post.slug === slug);
 
   if (!post) {
     return;
@@ -35,7 +32,7 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
     image,
     team,
   } = post.metadata;
-  let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
+  let ogImage = image && !image.startsWith("data:") ? new URL(image, `https://${baseURL}`).href : `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
@@ -61,8 +58,8 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
   };
 }
 
-export default function Blog({ params }: BlogParams) {
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === params.slug);
+export default async function Blog({ params }: BlogParams) {
+  let post = (await getPosts(["src", "app", "blog", "posts"])).find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -79,15 +76,15 @@ export default function Blog({ params }: BlogParams) {
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: safeJson({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
-              ? `https://${baseURL}${post.metadata.image}`
+            image: post.metadata.image && !post.metadata.image.startsWith("data:")
+              ? new URL(post.metadata.image, `https://${baseURL}`).href
               : `https://${baseURL}/og?title=${post.metadata.title}`,
             url: `https://${baseURL}/blog/${post.slug}`,
             author: {
@@ -107,8 +104,9 @@ export default function Blog({ params }: BlogParams) {
           {formatDate(post.metadata.publishedAt)}
         </Text>
       </Row>
+      {post.managed && post.metadata.image && <SmartImage src={post.metadata.image} alt={post.metadata.title} aspectRatio="16 / 9" radius="m" unoptimized />}
       <Column as="article" fillWidth>
-        <CustomMDX source={post.content} />
+        {post.managed ? <ManagedContent content={post.content} /> : <CustomMDX source={post.content} />}
       </Column>
       <ScrollToHash />
     </Column>

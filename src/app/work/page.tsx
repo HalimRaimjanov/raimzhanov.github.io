@@ -1,3 +1,4 @@
+import { safeJson } from '@/lib/safe-json';
 import { getPosts } from "@/app/utils/utils";
 import { Column } from "@/once-ui/components";
 import { YouTubeChannel } from "@/components/work/YouTubeChannel";
@@ -34,8 +35,8 @@ export async function generateMetadata() {
   };
 }
 
-export default function Work() {
-  const allProjects = getPosts(["src", "app", "work", "projects"]);
+export default async function Work() {
+  const allProjects = (await getPosts(["src", "app", "work", "projects"]));
 
   return (
     <Column maxWidth="m">
@@ -43,7 +44,7 @@ export default function Work() {
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: safeJson({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             headline: work.title,

@@ -8,6 +8,9 @@ const routes = {
   "/gallery": true,
   "/dreams": true,
   "/admin/dreams": true,
+  "/admin": true,
+  "/admin/blog": true,
+  "/admin/work": true,
 };
 
 // Enable password protection on selected routes

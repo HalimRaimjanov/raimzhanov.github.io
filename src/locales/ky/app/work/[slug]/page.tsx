@@ -1,3 +1,5 @@
+import { safeJson } from '@/lib/safe-json';
+import { ManagedContent } from '@/components/ManagedContent';
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/locales/ky/components/mdx";
 import { getPosts } from "@/locales/ky/app/utils/utils";
@@ -13,15 +15,10 @@ interface WorkParams {
   };
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "work", "projects"]);
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+export const dynamic = 'force-dynamic';
 
-export function generateMetadata({ params: { slug } }: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slug);
+export async function generateMetadata({ params: { slug } }: WorkParams) {
+  let post = (await getPosts(["src", "app", "work", "projects"])).find((post) => post.slug === slug);
 
   if (!post) {
     return;
@@ -35,7 +32,7 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
     image,
     team,
   } = post.metadata;
-  let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
+  let ogImage = image && !image.startsWith("data:") ? new URL(image, `https://${baseURL}`).href : `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
@@ -63,8 +60,8 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
   };
 }
 
-export default function Project({ params }: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === params.slug);
+export default async function Project({ params }: WorkParams) {
+  let post = (await getPosts(["src", "app", "work", "projects"])).find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -81,15 +78,15 @@ export default function Project({ params }: WorkParams) {
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: safeJson({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
-              ? `https://${baseURL}${post.metadata.image}`
+            image: post.metadata.image && !post.metadata.image.startsWith("data:")
+              ? new URL(post.metadata.image, `https://${baseURL}`).href
               : `https://${baseURL}/og?title=${post.metadata.title}`,
             url: `https://${baseURL}/work/${post.slug}`,
             author: {
@@ -121,7 +118,7 @@ export default function Project({ params }: WorkParams) {
             {formatDate(post.metadata.publishedAt)}
           </Text>
         </Flex>
-        <CustomMDX source={post.content} />
+        {post.managed ? <ManagedContent content={post.content} /> : <CustomMDX source={post.content} />}
       </Column>
       <ScrollToHash />
     </Column>

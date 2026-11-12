@@ -26,7 +26,7 @@ export function DreamAdmin() {
   }
   const field = (key: keyof Dream, value: string | number) => setDream(d => ({ ...d, [key]: value }));
   if (loading) return <div className={styles.admin}>Loading…</div>;
-  return <div className={styles.admin} lang="en"><span className={styles.eyebrow}>OWNER DASHBOARD</span><h1>Manage my dream</h1><p>Update your savings and presentation. Saved changes will be visible to everyone.</p>
+  return <div className={styles.admin} lang="en"><span className={styles.eyebrow}>OWNER DASHBOARD</span><nav className={styles.actions}><a href="/admin/blog">Blog</a><a href="/admin/work">Projects</a><a href="/admin/dreams" aria-current="page">Dream</a></nav><h1>Manage my dream</h1><p>Update your savings and presentation. Saved changes will be visible to everyone.</p>
     {message && <div className={styles.message} role="status">{message}</div>}
     {!auth ? <form onSubmit={login}><label>Admin password<input type="password" autoComplete="current-password" required value={password} onChange={e => setPassword(e.target.value)} maxLength={512} /></label><button disabled={busy} className={styles.button}>{busy ? 'Signing in…' : 'Sign in'}</button></form> : <><form onSubmit={save}>
       <label>Dream title<input required maxLength={100} value={dream.title} onChange={e => field('title', e.target.value)} /></label>
