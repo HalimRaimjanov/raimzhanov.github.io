@@ -50,3 +50,7 @@ It was edited with built-in imagegen from the owner's portrait. Prompt: extend
 the mountain landscape to a 16:9 cover, preserve the face, sunglasses, hairstyle
 and clothing, use natural light, and add no text or logos. The play icon and
 clickable link are rendered by the website.
+
+## Мечты и админка
+
+Раздел `/dreams`, защищённая админка `/admin/dreams`. Настройка хранилища и пароля: [DREAMS.md](DREAMS.md).

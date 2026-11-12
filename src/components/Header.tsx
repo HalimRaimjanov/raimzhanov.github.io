@@ -126,6 +126,9 @@ export const Header = () => {
                   />
                 </>
               )}
+              {routes["/dreams"] && (
+                <ToggleButton prefixIcon="dream" href="/dreams" label="Мечты" selected={pathname === "/dreams"} />
+              )}
               {routes["/gallery"] && (
                 <>
                   <ToggleButton

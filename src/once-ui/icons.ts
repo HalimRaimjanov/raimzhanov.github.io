@@ -26,6 +26,7 @@ import {
 } from "react-icons/hi2";
 
 import {
+  PiStarFourDuotone,
   PiHouseDuotone,
   PiUserCircleDuotone,
   PiGridFourDuotone,
@@ -57,6 +58,7 @@ export const iconLibrary: Record<string, IconType> = {
   close: HiMiniXMark,
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
+  dream: PiStarFourDuotone,
   home: PiHouseDuotone,
   gallery: PiImageDuotone,
   discord: FaDiscord,
