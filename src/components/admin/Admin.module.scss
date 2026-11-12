@@ -1,0 +1,45 @@
+.admin { --panel:#111e18; --line:#ffffff22; width:100%; max-width:1080px; min-width:0; margin:0 auto; padding:32px 0 64px; color:#edf4ef; font-size:15px;
+ &, * { box-sizing:border-box; }
+ h1 { font-size:clamp(28px,5vw,42px); line-height:1.15; margin:20px 0 14px; letter-spacing:-.04em; }
+ h2 { font-size:24px; line-height:1.3; margin:0 0 20px; }
+ h3 { margin:0 0 12px; }
+ p, small { color:#a9bcb0; line-height:1.6; }
+ small { display:block; font-size:12px; }
+ label { display:flex; flex-direction:column; gap:8px; min-width:0; font-size:14px; font-weight:500; }
+ input, select, textarea { appearance:none; display:block; box-sizing:border-box; width:100%; max-width:100%; min-width:0; margin:0; padding:12px 14px; border:1px solid #62766b; border-radius:10px; color:#f0f7f2; background:#09140e; font:inherit; font-size:16px; line-height:1.4; }
+ input, select { height:48px; }
+ textarea { min-height:108px; resize:vertical; }
+ select { padding-right:36px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%23c5d9cc' stroke-width='2'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 12px center; }
+ input[type=file] { height:auto; min-height:48px; padding:8px; overflow:hidden; font-size:13px; }
+ input::file-selector-button { border:0; border-radius:6px; background:#284333; color:#e6f6eb; padding:8px; margin-right:10px; }
+ input[type=date] { min-height:48px; color-scheme:dark; }
+ input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible { outline:2px solid #bbefd0; outline-offset:3px; }
+ button, .button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 16px; border:1px solid #668071; border-radius:10px; font:inherit; font-size:13px; line-height:1.4; font-weight:600; background:#1d3327; color:#edf7f0; cursor:pointer; text-decoration:none; white-space:normal; }
+ button:disabled { opacity:.5; cursor:wait; }
+ .primary { background:#c2eed1; color:#12271a; border-color:#c2eed1; }
+ .danger { border-color:#986b6b; color:#ffc4bf; background:#351e20; }
+ fieldset { display:grid; gap:20px; min-width:0; padding:0; margin:0; border:0; }
+ legend { font-size:18px; font-weight:600; padding:0 0 20px; }
+}
+.eyebrow { color:#a2bcad; font-size:11px; letter-spacing:.16em; }
+.nav { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; a { padding:10px 16px; border:1px solid var(--line); border-radius:10px; color:#c5dbce; text-decoration:none; } a[aria-current=page] { background:#c2eed1; color:#12271a; } }
+.toolbar, .actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.toolbar { margin:24px 0; }
+.panel { min-width:0; width:100%; padding:28px; margin:24px 0; border:1px solid var(--line); border-radius:20px; background:var(--panel); }
+.form { display:grid; gap:24px; }
+.row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; align-items:start; }
+.message { padding:16px; margin:20px 0; border:1px solid #8dcda5; border-radius:12px; background:#1a3023; overflow-wrap:anywhere; }
+.tableWrap { width:100%; overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+.table { width:100%; min-width:650px; border-collapse:collapse; table-layout:fixed; text-align:left;
+ th,td { padding:14px; vertical-align:top; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+ th { color:#adc7b7; font-size:12px; font-weight:500; background:#17291e; }
+ th:first-child { width:38%; } th:nth-child(2) { width:17%; } th:nth-child(3) { width:15%; } th:last-child { width:30%; }
+ tr:last-child td { border-bottom:0; }
+ td { font-size:13px; }
+ strong { display:block; line-height:1.4; margin-bottom:6px; }
+}
+.thumb { float:left; width:48px; height:48px; border-radius:8px; object-fit:cover; margin:0 10px 6px 0; }
+.badge { display:inline-block; padding:4px 8px; border-radius:6px; background:#294333; color:#d0efda; font-size:12px; }
+.gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:12px; >div { min-width:0; } img,video { width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:8px; } }
+.cover { display:block; width:100%; max-height:240px; object-fit:contain; border-radius:12px; }
+@media(max-width:600px) { .admin { padding:8px 0 32px; } .panel { padding:16px; border-radius:14px; } .row { grid-template-columns:minmax(0,1fr); gap:18px; } .toolbar { align-items:stretch; } .toolbar > * { flex:1 1 auto; } .table th,.table td { padding:12px; } }

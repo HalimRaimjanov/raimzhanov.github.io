@@ -1,3 +1,4 @@
+import { PublicationVideo } from '@/components/PublicationVideo';
 import { safeJson } from '@/lib/safe-json';
 import { ManagedContent } from '@/components/ManagedContent';
 import { notFound } from "next/navigation";
@@ -82,8 +83,8 @@ export default async function Project({ params }: WorkParams) {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
+            datePublished: post.metadata.publishedAt || undefined,
+            dateModified: post.metadata.publishedAt || undefined,
             description: post.metadata.summary,
             image: post.metadata.image && !post.metadata.image.startsWith("data:")
               ? new URL(post.metadata.image, `https://${baseURL}`).href
@@ -115,10 +116,11 @@ export default async function Project({ params }: WorkParams) {
         <Flex gap="12" marginBottom="24" vertical="center">
           {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m" />}
           <Text variant="body-default-s" onBackground="neutral-weak">
-            {formatDate(post.metadata.publishedAt)}
+            {post.metadata.publishedAt ? formatDate(post.metadata.publishedAt) : ""}
           </Text>
         </Flex>
-        {post.managed ? <ManagedContent content={post.content} /> : <CustomMDX source={post.content} />}
+        <PublicationVideo youtubeUrl={post.youtubeUrl} title={post.metadata.title} sourceUrl={post.sourceUrl} />
+        {post.managed ? <ManagedContent content={post.content} format={post.format} /> : <CustomMDX source={post.content} />}
       </Column>
       <ScrollToHash />
     </Column>

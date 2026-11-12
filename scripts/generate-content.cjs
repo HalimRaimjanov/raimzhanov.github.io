@@ -23,3 +23,5 @@ const output = path.join(root, 'src/generated/content.json');
 fs.mkdirSync(path.dirname(output), { recursive: true });
 fs.writeFileSync(output, JSON.stringify(catalog, null, 2) + '\n');
 console.log('Bundled articles and projects for RU, ENG and KG.');
+
+require('./generate-admin-seeds.cjs');

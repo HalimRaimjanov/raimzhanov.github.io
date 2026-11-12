@@ -1,6 +1,5 @@
 import { Column, Heading, Text } from "@/once-ui/components";
 import { Mailchimp } from "@/locales/en/components";
-import { Videos } from "@/locales/en/components/blog/Videos";
 import { Posts } from "@/locales/en/components/blog/Posts";
 import { baseURL } from "@/locales/en/app/resources";
 import { blog, person, newsletter } from "@/locales/en/app/resources/content";
@@ -65,8 +64,6 @@ export default function Blog() {
       <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="l">
         Practical articles and videos on software development, digital privacy and everyday technology.
       </Text>
-      <Videos />
-      <Heading as="h2" variant="heading-strong-xl" marginBottom="l">Articles</Heading>
       <Column fillWidth flex={1}>
         <Posts range={[1, 3]} thumbnail />
         <Posts range={[4]} columns="2" />

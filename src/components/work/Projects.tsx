@@ -9,9 +9,7 @@ interface ProjectsProps {
 export async function Projects({ range }: ProjectsProps) {
   const allProjects = (await getPosts(["src", "app", "work", "projects"]));
 
-  const sortedProjects = [...allProjects].sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-  });
+  const sortedProjects = allProjects;
 
   const displayedProjects = range
     ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)

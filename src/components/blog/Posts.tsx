@@ -11,9 +11,7 @@ interface PostsProps {
 export async function Posts({ range, columns = "1", thumbnail = false }: PostsProps) {
   let allBlogs = (await getPosts(["src", "app", "blog", "posts"]));
 
-  const sortedBlogs = [...allBlogs].sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-  });
+  const sortedBlogs = allBlogs;
 
   const displayedBlogs = range
     ? sortedBlogs.slice(range[0] - 1, range.length === 2 ? range[1] : sortedBlogs.length)
