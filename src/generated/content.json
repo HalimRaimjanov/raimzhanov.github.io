@@ -1,0 +1,347 @@
+{
+  "ru": {
+    "blog/posts": [
+      {
+        "slug": "career-journey",
+        "metadata": {
+          "title": "От разработчика до руководителя команды в MBulak",
+          "publishedAt": "2024-09-01",
+          "summary": "Опыт серверной разработки и переход к руководству командой в MBulak.",
+          "image": "/images/mbulak.png",
+          "images": [],
+          "tag": "Карьера",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nМой путь в MBulak начался с серверной разработки и привёл к руководству командой. Каждая роль помогала по-новому взглянуть на планирование, создание и поддержку надёжного финансового ПО.\n\n## Инженерная основа\n\nРабота с SQL-процедурами, интеграциями на Python и финансовыми сервисами научила меня учитывать точность данных, производительность и удобство сопровождения вместе.\n\n## Руководство командой\n\nКак руководитель команды я совмещаю технические решения с планированием и поддержкой разработчиков. Проверка кода, понятные приоритеты и конструктивная обратная связь — важная часть этой работы.\n\n## Чему я научился\n\nХорошая разработка зависит не только от кода, но и от общения. Раннее обсуждение требований и ясные технические решения помогают команде уверенно решать задачи и выпускать продукты.\n"
+      },
+      {
+        "slug": "conference",
+        "metadata": {
+          "title": "Firebird Conference 2025: знания и сертификация",
+          "publishedAt": "2025-05-29",
+          "summary": "Технические дискуссии, обмен опытом и сертификация администратора баз данных Firebird в Москве.",
+          "image": "/images/conferense.jpeg",
+          "images": [],
+          "tag": "Конференция",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nЯ посетил Firebird Conference 2025 в Москве, чтобы учиться у специалистов по базам данных и обмениваться практическим опытом с разработчиками и архитекторами.\n\n## Технические дискуссии\n\nДоклады были посвящены развитию Firebird, производительности баз данных, безопасности и архитектуре. Обсуждение Firebird 6.0 помогло понять направление развития проекта.\n\n## Сертификация администратора баз данных\n\nВо время конференции я сдал экзамен на сертификат администратора баз данных Firebird. Это позволило подтвердить мои знания в администрировании баз данных.\n\n## Итоги\n\nКонференция дала практические идеи для работы с базами данных и возможность обсудить общие инженерные задачи с сообществом Firebird.\n"
+      },
+      {
+        "slug": "it-reels",
+        "metadata": {
+          "title": "Короткие видео о технологиях в Instagram",
+          "publishedAt": "2025-08-12",
+          "summary": "Коротко о технологиях, разработке ПО и повседневной работе инженера.",
+          "image": "/images/halim.png",
+          "images": [],
+          "tag": "Технологии",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nЯ публикую короткие видео о технологиях в Instagram, опираясь на свой опыт разработки и руководства командой.\n\n## Темы\n\n- **Технологии:** понятные объяснения технических понятий.\n- **Карьера в разработке:** уроки из учёбы и работы над программными продуктами.\n- **Ежедневная работа:** практические примеры глазами разработчика.\n\n## Формат\n\nКаждое видео посвящено одной идее и кратко её объясняет. Так технические темы становятся доступнее зрителям с разным опытом.\n\n[Подписывайтесь на мой Instagram](https://instagram.com/halim_raimjanov), чтобы смотреть новые видео.\n"
+      }
+    ],
+    "work/projects": [
+      {
+        "slug": "selfvisa",
+        "metadata": {
+          "title": "SelfVisa — сайт визовых услуг",
+          "publishedAt": "2025-03-12",
+          "summary": "Адаптивный сайт с описанием визовых услуг, рекомендациями по подаче заявлений и записью на консультацию.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/selfvisa-1.png",
+            "/images/projects/project-01/selfvisa-2.png"
+          ],
+          "tag": "",
+          "team": [
+            {
+              "name": "Халим",
+              "role": "Разработчик ПО",
+              "avatar": "/images/avatar.jpg",
+              "linkedIn": "https://www.linkedin.com/halimraimjanov/"
+            }
+          ],
+          "link": "https://selfvisa.kg/"
+        },
+        "content": "\n## О проекте\n\nЯ разработал сайт для SelfVisa — компании, которая помогает с оформлением виз в США и страны Европы. Информация об услугах и консультациях собрана в понятную и доступную структуру.\n\n## Задачи\n\n- **Страницы услуг:** помощь с визами, подготовка документов и рекомендации по собеседованию.\n- **Информация для клиентов:** варианты консультаций и ответы на частые вопросы.\n- **Адаптивный дизайн:** удобное отображение на компьютерах и телефонах.\n\n## Реализация\n\nСтруктура страниц и адаптивное оформление созданы на HTML и CSS. Интерактивные элементы помогают пользоваться навигацией.\n\n## Результат\n\nЕдиный ресурс, где заявители могут изучить услуги и определить следующий шаг в оформлении визы.\n"
+      },
+      {
+        "slug": "simple-portfolio-builder",
+        "metadata": {
+          "title": "Портфолио на Next.js и Once UI",
+          "publishedAt": "2025-01-30",
+          "summary": "Личное портфолио с описаниями проектов, статьями и фотогалереей.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/video-01.mp4"
+          ],
+          "tag": "",
+          "team": [],
+          "link": ""
+        },
+        "content": "\n## О проекте\n\nЛичное портфолио на Next.js и Once UI. Здесь собраны профессиональный опыт, избранные проекты, технические статьи и фотографии.\n\n## Структура\n\n- **Описания проектов:** кратко о задачах и реализации.\n- **Контент в MDX:** статьи и страницы проектов хранятся в исходных файлах.\n- **Общие компоненты:** единый интерфейс во всех разделах сайта.\n"
+      },
+      {
+        "slug": "ventilation-system",
+        "metadata": {
+          "title": "Climate KG — сайт систем вентиляции",
+          "publishedAt": "2025-03-01",
+          "summary": "Адаптивный сайт товаров и услуг для бытовых и коммерческих систем вентиляции.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/ventilation-1.png",
+            "/images/projects/project-01/ventilation-2.png",
+            "/images/projects/project-01/ventilation-3.png",
+            "/images/projects/project-01/ventilation-4.png",
+            "/images/projects/project-01/ventilation-5.png"
+          ],
+          "tag": "",
+          "team": [
+            {
+              "name": "Халим",
+              "role": "Разработчик ПО",
+              "avatar": "/images/avatar.jpg",
+              "linkedIn": "https://www.linkedin.com/halimraimjanov/"
+            }
+          ],
+          "link": "https://climatekg.com/"
+        },
+        "content": "\n## О проекте\n\nЯ разработал сайт компании, которая поставляет и устанавливает системы вентиляции. Информация о товарах и монтаже организована для частных и корпоративных клиентов.\n\n## Задачи\n\n- **Каталог товаров:** карточки с характеристиками и ценами.\n- **Страницы услуг:** информация о монтаже и поддержке клиентов.\n- **Адаптивный дизайн:** вёрстка для компьютеров и мобильных устройств.\n- **Интерактивные элементы:** навигация и анимации на jQuery.\n\n## Реализация\n\nHTML и CSS отвечают за структуру и оформление страниц. Интерактивные элементы реализованы на jQuery с учётом адаптивной вёрстки и производительности анимаций.\n\n## Результат\n\nСтруктурированный сайт, который помогает клиентам изучить оборудование для вентиляции и разобраться в услугах компании.\n"
+      }
+    ]
+  },
+  "en": {
+    "blog/posts": [
+      {
+        "slug": "career-journey",
+        "metadata": {
+          "title": "From Software Engineer to Team Lead at MBulak",
+          "publishedAt": "2024-09-01",
+          "summary": "Lessons from backend development and the transition to engineering leadership at MBulak.",
+          "image": "/images/mbulak.png",
+          "images": [],
+          "tag": "Career",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nMy work at MBulak has evolved from backend development to leading an engineering team. Each role has added a new perspective on how reliable financial software is planned, built and maintained.\n\n## Engineering foundations\n\nWorking with SQL procedures, Python integrations and financial services taught me to consider data accuracy, system performance and maintainability together.\n\n## Leading the team\n\nAs a Team Lead, I combine technical decisions with delivery planning and support for engineers. Code reviews, clear priorities and constructive feedback are central to this work.\n\n## What I have learned\n\nGood engineering depends on communication as well as code. Discussing requirements early and making technical decisions explicit helps the team solve problems and deliver with confidence.\n"
+      },
+      {
+        "slug": "conference",
+        "metadata": {
+          "title": "Firebird Conference 2025: Learning and Certification",
+          "publishedAt": "2025-05-29",
+          "summary": "Technical discussions, professional exchange and Firebird database administrator certification in Moscow.",
+          "image": "/images/conferense.jpeg",
+          "images": [],
+          "tag": "Conference",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nI attended Firebird Conference 2025 in Moscow to learn from database specialists and exchange practical experience with developers and architects.\n\n## Technical discussions\n\nThe sessions covered Firebird development, database performance, security and architecture. Discussions about Firebird 6.0 offered a view of the project's direction.\n\n## Database administrator certification\n\nDuring the conference, I passed the Firebird Database Administrator certification exam. The assessment gave me an opportunity to validate my database administration knowledge.\n\n## Takeaways\n\nThe event provided practical ideas for working with databases and a chance to discuss shared engineering challenges with the Firebird community.\n"
+      },
+      {
+        "slug": "it-reels",
+        "metadata": {
+          "title": "Short Technology Videos on Instagram",
+          "publishedAt": "2025-08-12",
+          "summary": "Short explanations of technology, software development and everyday engineering work.",
+          "image": "/images/halim.png",
+          "images": [],
+          "tag": "Technology",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nI share short technology videos on Instagram, drawing on my experience in software development and team leadership.\n\n## Topics\n\n- **Technology:** clear explanations of technical concepts.\n- **Engineering careers:** lessons from learning and working in software development.\n- **Daily work:** practical examples from a developer's perspective.\n\n## Format\n\nEach video focuses on one idea and explains it briefly, making technical topics accessible to viewers with different levels of experience.\n\n[Follow my Instagram account](https://instagram.com/halim_raimjanov) for new videos.\n"
+      }
+    ],
+    "work/projects": [
+      {
+        "slug": "selfvisa",
+        "metadata": {
+          "title": "SelfVisa — Visa Services Website",
+          "publishedAt": "2025-03-12",
+          "summary": "A responsive website presenting visa services, application guidance and consultation options.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/selfvisa-1.png",
+            "/images/projects/project-01/selfvisa-2.png"
+          ],
+          "tag": "",
+          "team": [
+            {
+              "name": "Khalim",
+              "role": "Software Engineer",
+              "avatar": "/images/avatar.jpg",
+              "linkedIn": "https://www.linkedin.com/halimraimjanov/"
+            }
+          ],
+          "link": "https://selfvisa.kg/"
+        },
+        "content": "\n## Overview\n\nI developed a website for SelfVisa, a visa assistance company serving applicants for the United States and European countries. The site brings service information and consultation options into a clear, accessible structure.\n\n## Scope\n\n- **Service pages:** visa assistance, document preparation and interview guidance.\n- **Customer information:** consultation options and frequently asked questions.\n- **Responsive design:** layouts adapted for desktop and mobile screens.\n\n## Implementation\n\nThe website uses HTML and CSS for page structure and responsive styling, with interactive elements to support navigation.\n\n## Result\n\nA central resource where applicants can review available services and find the next step in their application process.\n"
+      },
+      {
+        "slug": "simple-portfolio-builder",
+        "metadata": {
+          "title": "Portfolio Built with Next.js and Once UI",
+          "publishedAt": "2025-01-30",
+          "summary": "A personal portfolio combining project case studies, articles and a photo gallery.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/video-01.mp4"
+          ],
+          "tag": "",
+          "team": [],
+          "link": ""
+        },
+        "content": "\n## Overview\n\nA personal portfolio built with Next.js and Once UI. It brings together professional experience, selected projects, technical articles and photographs.\n\n## Structure\n\n- **Project case studies:** concise descriptions of the work and implementation.\n- **MDX content:** articles and project pages maintained as source files.\n- **Reusable components:** a consistent interface across the site's sections.\n"
+      },
+      {
+        "slug": "ventilation-system",
+        "metadata": {
+          "title": "Climate KG — Ventilation Services Website",
+          "publishedAt": "2025-03-01",
+          "summary": "A responsive product and service website for residential and commercial ventilation systems.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/ventilation-1.png",
+            "/images/projects/project-01/ventilation-2.png",
+            "/images/projects/project-01/ventilation-3.png",
+            "/images/projects/project-01/ventilation-4.png",
+            "/images/projects/project-01/ventilation-5.png"
+          ],
+          "tag": "",
+          "team": [
+            {
+              "name": "Khalim",
+              "role": "Software Engineer",
+              "avatar": "/images/avatar.jpg",
+              "linkedIn": "https://www.linkedin.com/halimraimjanov/"
+            }
+          ],
+          "link": "https://climatekg.com/"
+        },
+        "content": "\n## Overview\n\nI developed a website for a company supplying and installing ventilation systems. The site organizes product information and installation services for homeowners and business customers.\n\n## Scope\n\n- **Product catalogue:** product cards with specifications and pricing.\n- **Service pages:** installation information and customer support.\n- **Responsive design:** layouts for desktop and mobile devices.\n- **Interactive elements:** navigation and animations implemented with jQuery.\n\n## Implementation\n\nHTML and CSS provide the page structure and styling. jQuery handles interactive elements, with attention to responsive layouts and animation performance.\n\n## Result\n\nA structured website that helps customers review ventilation products and understand the company's services.\n"
+      }
+    ]
+  },
+  "ky": {
+    "blog/posts": [
+      {
+        "slug": "career-journey",
+        "metadata": {
+          "title": "MBulak: программисттен команда жетекчисине чейин",
+          "publishedAt": "2024-09-01",
+          "summary": "MBulak компаниясындагы сервердик программалоо тажрыйбасы жана команда жетекчилигине өтүү.",
+          "image": "/images/mbulak.png",
+          "images": [],
+          "tag": "Карьера",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nMBulak компаниясындагы жолум сервердик программалоодон башталып, команданы жетектөөгө алып келди. Ар бир кызмат ишенимдүү финансылык программаларды пландоого, түзүүгө жана тейлөөгө жаңы көз караш берди.\n\n## Инженердик негиз\n\nSQL-процедуралар, Python интеграциялары жана финансылык кызматтар менен иштөө маалыматтын тактыгын, өндүрүмдүүлүктү жана тейлөө ыңгайлуулугун бирге эске алууга үйрөттү.\n\n## Команданы жетектөө\n\nКоманда жетекчиси катары техникалык чечимдерди пландоо жана программисттерди колдоо менен айкалыштырам. Кодду текшерүү, так артыкчылыктар жана пайдалуу пикир алмашуу — бул иштин маанилүү бөлүгү.\n\n## Эмнени үйрөндүм\n\nСапаттуу программалоо коддон гана эмес, баарлашуудан да көз каранды. Талаптарды эрте талкуулоо жана техникалык чечимдерди ачык түшүндүрүү командага тапшырмаларды ишенимдүү аткарууга жардам берет.\n"
+      },
+      {
+        "slug": "conference",
+        "metadata": {
+          "title": "Firebird Conference 2025: билим жана сертификация",
+          "publishedAt": "2025-05-29",
+          "summary": "Москвадагы техникалык талкуулар, тажрыйба алмашуу жана Firebird маалымат базаларынын администратору катары сертификация.",
+          "image": "/images/conferense.jpeg",
+          "images": [],
+          "tag": "Конференция",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nМаалымат базалары боюнча адистерден үйрөнүү жана программисттер менен архитекторлор менен тажрыйба алмашуу үчүн Москвадагы Firebird Conference 2025 конференциясына катыштым.\n\n## Техникалык талкуулар\n\nБаяндамалар Firebird өнүгүүсү, маалымат базаларынын өндүрүмдүүлүгү, коопсуздук жана архитектура тууралуу болду. Firebird 6.0 боюнча талкуулар долбоордун өнүгүү багытын түшүнүүгө жардам берди.\n\n## Маалымат базаларынын администраторун сертификациялоо\n\nКонференция учурунда Firebird маалымат базаларынын администратору сертификатына экзамен тапшырдым. Бул билимимди ырастоого мүмкүнчүлүк берди.\n\n## Жыйынтык\n\nКонференция маалымат базалары менен иштөөгө практикалык идеяларды берди. Firebird коомчулугу менен жалпы инженердик маселелерди талкууладык.\n"
+      },
+      {
+        "slug": "it-reels",
+        "metadata": {
+          "title": "Instagram баракчасындагы технология тууралуу кыска видеолор",
+          "publishedAt": "2025-08-12",
+          "summary": "Технологиялар, программалоо жана инженердин күнүмдүк иши тууралуу кыскача.",
+          "image": "/images/halim.png",
+          "images": [],
+          "tag": "Технологиялар",
+          "team": [],
+          "link": ""
+        },
+        "content": "\nПрограммалоо жана команда жетектөө тажрыйбама таянып, Instagram баракчамда технологиялар тууралуу кыска видеолорду жарыялайм.\n\n## Темалар\n\n- **Технологиялар:** техникалык түшүнүктөрдү жөнөкөй тил менен түшүндүрүү.\n- **Программалоодогу карьера:** окуудан жана программалык продукттар менен иштөөдөн алынган сабактар.\n- **Күнүмдүк иш:** программисттин көз карашынан практикалык мисалдар.\n\n## Формат\n\nАр бир видео бир идеяга арналат жана аны кыскача түшүндүрөт. Ошентип техникалык темалар ар кандай тажрыйбасы бар көрүүчүлөргө түшүнүктүү болот.\n\nЖаңы видеолор үчүн [Instagram баракчама жазылыңыз](https://instagram.com/halim_raimjanov).\n"
+      }
+    ],
+    "work/projects": [
+      {
+        "slug": "selfvisa",
+        "metadata": {
+          "title": "SelfVisa — виза кызматтарынын сайты",
+          "publishedAt": "2025-03-12",
+          "summary": "Виза кызматтары, арыз берүү боюнча сунуштар жана консультация тууралуу адаптивдүү сайт.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/selfvisa-1.png",
+            "/images/projects/project-01/selfvisa-2.png"
+          ],
+          "tag": "",
+          "team": [
+            {
+              "name": "Халим",
+              "role": "Программист",
+              "avatar": "/images/avatar.jpg",
+              "linkedIn": "https://www.linkedin.com/halimraimjanov/"
+            }
+          ],
+          "link": "https://selfvisa.kg/"
+        },
+        "content": "\n## Долбоор тууралуу\n\nАКШга жана Европа өлкөлөрүнө виза алууга жардам берген SelfVisa компаниясы үчүн сайт иштеп чыктым. Кызматтар жана консультациялар тууралуу маалымат түшүнүктүү түзүмгө бириктирилген.\n\n## Милдеттер\n\n- **Кызматтардын барактары:** виза алуу, документтерди даярдоо жана маектешүү боюнча жардам.\n- **Кардарлар үчүн маалымат:** консультация варианттары жана көп берилүүчү суроолор.\n- **Адаптивдүү дизайн:** компьютерде жана телефондо ыңгайлуу көрүнүш.\n\n## Ишке ашыруу\n\nБарактардын түзүмү жана адаптивдүү жасалгалоо HTML жана CSS менен түзүлгөн. Интерактивдүү элементтер багыттоону жеңилдетет.\n\n## Натыйжа\n\nАрыз берүүчүлөр кызматтарды изилдеп, виза алуудагы кийинки кадамын аныктай ала турган бирдиктүү ресурс.\n"
+      },
+      {
+        "slug": "simple-portfolio-builder",
+        "metadata": {
+          "title": "Next.js жана Once UI менен түзүлгөн портфолио",
+          "publishedAt": "2025-01-30",
+          "summary": "Долбоорлордун сүрөттөмөлөрү, макалалар жана сүрөт галереясы бар жеке портфолио.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/video-01.mp4"
+          ],
+          "tag": "",
+          "team": [],
+          "link": ""
+        },
+        "content": "\n## Долбоор тууралуу\n\nNext.js жана Once UI менен түзүлгөн жеке портфолио. Бул жерде кесиптик тажрыйба, тандалган долбоорлор, техникалык макалалар жана сүрөттөр чогултулган.\n\n## Түзүм\n\n- **Долбоорлордун сүрөттөмөлөрү:** милдеттер жана аларды ишке ашыруу тууралуу кыскача.\n- **MDX мазмуну:** макалалар жана долбоор барактары баштапкы файлдарда сакталат.\n- **Жалпы компоненттер:** сайттын бардык бөлүмдөрүндө бирдиктүү интерфейс.\n"
+      },
+      {
+        "slug": "ventilation-system",
+        "metadata": {
+          "title": "Climate KG — желдетүү системаларынын сайты",
+          "publishedAt": "2025-03-01",
+          "summary": "Турак жай жана коммерциялык желдетүү системалары үчүн товарлардын жана кызматтардын адаптивдүү сайты.",
+          "image": "",
+          "images": [
+            "/images/projects/project-01/ventilation-1.png",
+            "/images/projects/project-01/ventilation-2.png",
+            "/images/projects/project-01/ventilation-3.png",
+            "/images/projects/project-01/ventilation-4.png",
+            "/images/projects/project-01/ventilation-5.png"
+          ],
+          "tag": "",
+          "team": [
+            {
+              "name": "Халим",
+              "role": "Программист",
+              "avatar": "/images/avatar.jpg",
+              "linkedIn": "https://www.linkedin.com/halimraimjanov/"
+            }
+          ],
+          "link": "https://climatekg.com/"
+        },
+        "content": "\n## Долбоор тууралуу\n\nЖелдетүү системаларын жеткирип, орноткон компания үчүн сайт иштеп чыктым. Товарлар жана монтаж тууралуу маалымат жеке жана корпоративдик кардарлар үчүн уюштурулган.\n\n## Милдеттер\n\n- **Товарлардын каталогу:** мүнөздөмөлөрү жана баалары көрсөтүлгөн карточкалар.\n- **Кызматтардын барактары:** монтаж жана кардарларды колдоо тууралуу маалымат.\n- **Адаптивдүү дизайн:** компьютерлер жана мобилдик түзмөктөр үчүн барак түзүмү.\n- **Интерактивдүү элементтер:** jQuery менен багыттоо жана анимациялар.\n\n## Ишке ашыруу\n\nHTML жана CSS барактардын түзүмүнө жана жасалгалоосуна жооп берет. Интерактивдүү элементтер адаптивдүү түзүмдү жана анимациянын өндүрүмдүүлүгүн эске алуу менен jQuery аркылуу жасалган.\n\n## Натыйжа\n\nКардарларга желдетүү жабдууларын изилдөөгө жана компаниянын кызматтарын түшүнүүгө жардам берген түзүмдүү сайт.\n"
+      }
+    ]
+  }
+}

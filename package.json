@@ -5,7 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prebuild": "node scripts/generate-content.cjs",
+    "predev": "node scripts/generate-content.cjs"
   },
   "dependencies": {
     "@floating-ui/react-dom": "^2.1.1",
