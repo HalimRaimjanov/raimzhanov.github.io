@@ -9,7 +9,7 @@ interface ProjectsProps {
 export async function Projects({ range }: ProjectsProps) {
   const allProjects = (await getPosts(["src", "app", "work", "projects"]));
 
-  const sortedProjects = allProjects;
+  const sortedProjects = allProjects.filter(post=>post.kind!=='channel');
 
   const displayedProjects = range
     ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)

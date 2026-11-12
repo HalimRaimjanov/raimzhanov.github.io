@@ -3,19 +3,20 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import styles from "./Gallery.module.scss";
-import { gallery } from "@/locales/ky/app/resources/content";
 
-export default function MasonryGrid() {
+export default function MasonryGrid({photos}: {photos:{src:string;alt:string}[]}) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [active, setActive] = useState(0);
-  const photos = gallery.images;
+
+  const selected = photos[Math.min(active, photos.length - 1)];
   const move = (step: number) => setActive((index) => (index + step + photos.length) % photos.length);
 
+  if (!photos.length) return null;
   return (
     <>
       <div className={styles.grid}>
         {photos.map((photo, index) => (
-          <button key={photo.src} type="button" className={styles.photo} aria-label={`Сүрөттү ачуу:  ${photo.alt}`}
+          <button key={index} type="button" className={styles.photo} aria-label={`Сүрөттү ачуу:  ${photo.alt}`}
             onClick={() => { setActive(index); dialog.current?.showModal(); }}>
             <Image src={photo.src} alt={photo.alt} fill priority={index < 3}
               sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" />
@@ -32,7 +33,7 @@ export default function MasonryGrid() {
         <div className={styles.viewer}>
           <button className={styles.close} type="button" aria-label="Сүрөт көрүүнү жабуу" onClick={() => dialog.current?.close()}>×</button>
           <div className={styles.fullPhoto}>
-            <Image src={photos[active].src} alt={photos[active].alt} fill sizes="90vw" />
+            <Image src={selected.src} alt={selected.alt} fill sizes="90vw" />
           </div>
           <div className={styles.controls}>
             <button type="button" aria-label="Мурунку сүрөт" onClick={() => move(-1)}>←</button>

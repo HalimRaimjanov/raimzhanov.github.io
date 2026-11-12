@@ -22,7 +22,7 @@ export async function PUT(request:Request) {
  if(!sameOrigin(request)||!authenticated()) return json({error:'Войдите в админку'},401);
  let entry:Entry,version:string;
  try {
-  const text=await request.text(); if(text.length>1900000) return json({error:'Публикация слишком большая. Уменьшите изображения.'},413);
+  const text=await request.text(); if(text.length>3300000) return json({error:'Публикация слишком большая. Уменьшите изображения.'},413);
   const value=JSON.parse(text); entry=validateEntry(value); version=typeof value.updatedAt==='string'?value.updatedAt:'';
   entry.updatedAt=`${new Date().toISOString()}:${randomUUID()}`;
  } catch(e) { return json({error:e instanceof Error?e.message:'Проверьте поля'},400); }

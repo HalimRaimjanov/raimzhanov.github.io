@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Dream, emptyDream, convertDreamAmount } from '@/lib/dream';
 import { Column, Heading, Text } from '@/once-ui/components';
 import styles from './Dreams.module.scss';
-export function DreamView({ initial, live = false }: { initial: Dream; live?: boolean }) {
+export function DreamView({ initial, live = false, showIntro = true }: { initial: Dream; live?: boolean; showIntro?: boolean }) {
   const [dream, setDream] = useState(initial);
   useEffect(() => setDream(initial), [initial]);
   useEffect(() => {
@@ -24,10 +24,10 @@ export function DreamView({ initial, live = false }: { initial: Dream; live?: bo
   const remaining = Math.max(0, dream.target - dream.saved);
   const percent = dream.target ? Math.min(100, dream.saved / dream.target * 100) : 0;
   return <Column maxWidth="m" fillWidth className={styles.page} lang="en">
-    <Column fillWidth gap="m" marginBottom="l">
+    {showIntro && <Column fillWidth gap="m" marginBottom="l">
       <Heading as="h1" variant="display-strong-s">Dreams</Heading>
       <Text variant="body-default-m" onBackground="neutral-weak">Every big dream starts with a small step. Here I share my goal and the journey towards it.</Text>
-    </Column>
+    </Column>}
     <article className={styles.card}>
       <div className={styles.visual}><span className={styles.tag}>↗ MY NEXT GOAL</span>
         {dream.image ? <img src={dream.image} alt={title} className={styles.heroImage} /> : <div className={styles.orbit} aria-hidden="true"><div /><span>✦</span></div>}

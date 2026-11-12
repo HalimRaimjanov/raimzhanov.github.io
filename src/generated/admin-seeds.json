@@ -601,5 +601,615 @@
     },
     "updatedAt": "seed-v2",
     "createdAt": "2026-11-11T23:59:50.000Z"
+  },
+  {
+    "slug": "gallery-1",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/lake-portrait.webp",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Халим в лодке на озере",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Halim on a boat beside the lake",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Халим көлдө кайыкта",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-12T00:00:00.000Z"
+  },
+  {
+    "slug": "gallery-2",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/interior-portrait.webp",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Халим в мраморном атриуме",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Halim in a marble atrium",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Халим мрамор атриумда",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:59.000Z"
+  },
+  {
+    "slug": "gallery-3",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/event-portrait.webp",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Халим на мероприятии MBulak",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Halim at an MBulak event",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Халим MBulak иш-чарасында",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:58.000Z"
+  },
+  {
+    "slug": "gallery-4",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/suit-portrait.webp",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Халим в чёрном костюме у белого автомобиля",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Halim in a black suit beside a white car",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Халим ак унаанын жанында кара костюмчан",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:57.000Z"
+  },
+  {
+    "slug": "gallery-5",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/portrait-portrait.webp",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Портрет Халима на тёмном фоне",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Portrait of Halim against a dark background",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Халимдин кара фондогу портрети",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:56.000Z"
+  },
+  {
+    "slug": "gallery-6",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-01.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 06",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 06",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 06",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:55.000Z"
+  },
+  {
+    "slug": "gallery-7",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-02.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 07",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 07",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 07",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:54.000Z"
+  },
+  {
+    "slug": "gallery-8",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-03.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 08",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 08",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 08",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:53.000Z"
+  },
+  {
+    "slug": "gallery-9",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-04.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 09",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 09",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 09",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:52.000Z"
+  },
+  {
+    "slug": "gallery-10",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-05.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 10",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 10",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 10",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:51.000Z"
+  },
+  {
+    "slug": "gallery-11",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-06.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 11",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 11",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 11",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:50.000Z"
+  },
+  {
+    "slug": "gallery-12",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-07.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 12",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 12",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 12",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:49.000Z"
+  },
+  {
+    "slug": "gallery-13",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-08.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 13",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 13",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 13",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:48.000Z"
+  },
+  {
+    "slug": "gallery-14",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-10.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 14",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 14",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 14",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:47.000Z"
+  },
+  {
+    "slug": "gallery-15",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-11.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 15",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 15",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 15",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:46.000Z"
+  },
+  {
+    "slug": "gallery-16",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-12.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 16",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 16",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 16",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:45.000Z"
+  },
+  {
+    "slug": "gallery-17",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-13.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 17",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 17",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 17",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:44.000Z"
+  },
+  {
+    "slug": "gallery-18",
+    "section": "gallery",
+    "kind": "photo",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/gallery/img-14.jpg",
+    "images": [],
+    "team": [],
+    "link": "",
+    "tag": "",
+    "translations": {
+      "ru": {
+        "title": "Личная фотография 18",
+        "summary": "",
+        "content": ""
+      },
+      "en": {
+        "title": "Personal photograph 18",
+        "summary": "",
+        "content": ""
+      },
+      "ky": {
+        "title": "Жеке сүрөт 18",
+        "summary": "",
+        "content": ""
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-11T23:59:43.000Z"
+  },
+  {
+    "slug": "youtube-channel",
+    "section": "work",
+    "kind": "channel",
+    "format": "text",
+    "publishedAt": "",
+    "published": true,
+    "image": "/images/youtube/channel-cover.webp",
+    "images": [
+      "/images/youtube/channel-cover.webp"
+    ],
+    "team": [],
+    "link": "https://www.youtube.com/@HalimRaimzhan",
+    "tag": "YouTube",
+    "translations": {
+      "ru": {
+        "title": "О технологиях простыми словами",
+        "summary": "Я веду YouTube-канал, где рассказываю о технологиях, цифровой приватности и безопасности в интернете.",
+        "content": "Я веду YouTube-канал, где рассказываю о технологиях, цифровой приватности и безопасности в интернете."
+      },
+      "en": {
+        "title": "Technology in plain language",
+        "summary": "My YouTube channel about technology, digital privacy and online safety.",
+        "content": "My YouTube channel about technology, digital privacy and online safety."
+      },
+      "ky": {
+        "title": "Технологиялар тууралуу жөнөкөй тил менен",
+        "summary": "YouTube каналымда технологиялар, санариптик купуялык жана интернеттеги коопсуздук тууралуу айтып берем.",
+        "content": "YouTube каналымда технологиялар, санариптик купуялык жана интернеттеги коопсуздук тууралуу айтып берем."
+      }
+    },
+    "updatedAt": "seed-v3",
+    "createdAt": "2026-11-12T00:00:00.000Z"
   }
 ]

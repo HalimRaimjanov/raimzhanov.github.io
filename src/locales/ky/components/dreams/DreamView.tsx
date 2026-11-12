@@ -4,7 +4,7 @@ import { Dream, emptyDream, convertDreamAmount } from '@/lib/dream';
 import { Column, Heading, Text } from '@/once-ui/components';
 import { formatDate } from '@/locales/ky/app/utils/formatDate';
 import styles from './Dreams.module.scss';
-export function DreamView({ initial, live = false }: { initial: Dream; live?: boolean }) {
+export function DreamView({ initial, live = false, showIntro = true }: { initial: Dream; live?: boolean; showIntro?: boolean }) {
   const [dream, setDream] = useState(initial);
   useEffect(() => setDream(initial), [initial]);
   useEffect(() => {
@@ -25,10 +25,10 @@ export function DreamView({ initial, live = false }: { initial: Dream; live?: bo
   const remaining = Math.max(0, dream.target - dream.saved);
   const percent = dream.target ? Math.min(100, dream.saved / dream.target * 100) : 0;
   return <Column maxWidth="m" fillWidth className={styles.page} lang="ky">
-    <Column fillWidth gap="m" marginBottom="l">
+    {showIntro && <Column fillWidth gap="m" marginBottom="l">
       <Heading as="h1" variant="display-strong-s">Кыялдар</Heading>
       <Text variant="body-default-m" onBackground="neutral-weak">Ар бир чоң кыял биринчи кадамдан башталат. Бул жерде максатым жана ага жетүү жолум менен бөлүшөм.</Text>
-    </Column>
+    </Column>}
     <article className={styles.card}>
       <div className={styles.visual}><span className={styles.tag}>↗ МЕНИН КИЙИНКИ МАКСАТЫМ</span>
         {dream.image ? <img src={dream.image} alt={title} className={styles.heroImage} /> : <div className={styles.orbit} aria-hidden="true"><div /><span>✦</span></div>}
