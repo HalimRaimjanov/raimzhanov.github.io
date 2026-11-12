@@ -54,7 +54,7 @@ const home = {
   headline: <>Fullstack-разработчик и руководитель команды</>,
   subline: (
     <>
-      Я Халим, руковожу командой разработки в <InlineCode>MBulak</InlineCode>.
+      Я Халим, руковожу командой разработки в <span style={{ whiteSpace: "nowrap" }}><InlineCode>MBulak</InlineCode>.</span>{" "}
       Создаю финансовое ПО, проверяю код и веду команду от планирования до выпуска продукта.
     </>
   ),

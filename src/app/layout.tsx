@@ -15,7 +15,7 @@ import { home as kyrgyzHome } from '@/locales/ky/app/resources/content';
 import classNames from "classnames";
 
 import { Footer, Header, RouteGuard } from "@/components";
-import { baseURL, effects, style } from "@/app/resources";
+import { baseURL, effects, style, display } from "@/app/resources";
 
 import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
@@ -176,7 +176,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             }}
           />
           <Flex fillWidth minHeight="16"></Flex>
-          <LanguagePicker locale={locale} />
+          <LanguagePicker locale={locale} timeZone={person.location} showTime={display.time} />
           <SiteHeader />
           <Flex
             position="relative"

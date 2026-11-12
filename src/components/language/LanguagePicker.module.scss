@@ -1,2 +1,18 @@
-.picker { position: fixed; top: 16px; right: 16px; z-index: 20; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--neutral-border-medium); border-radius: var(--radius-m); background: var(--page-background); color: var(--neutral-on-background-strong); box-shadow: 0 4px 16px #0002; select { font: inherit; font-size: 12px; min-height: 28px; color: inherit; background: var(--page-background); border: none; cursor: pointer; } select:focus-visible { outline: 2px solid var(--brand-on-background-strong); outline-offset: 3px; } }
-@media (max-width: 768px) { .picker { position: absolute; top: 12px; right: 16px; } }
+.utility {
+  position: fixed; top: 24px; right: 20px; z-index: 20;
+  display: flex; align-items: center; height: 44px; padding: 0 4px 0 14px;
+  border: 1px solid var(--neutral-border-medium); border-radius: 14px;
+  background: var(--surface-background); color: var(--neutral-on-background-strong);
+  backdrop-filter: blur(16px); box-shadow: 0 4px 20px #00000018;
+}
+.clock { min-width: 8ch; font-size: 13px; line-height: 1; font-weight: 500; letter-spacing: .025em; font-variant-numeric: tabular-nums; color: var(--neutral-on-background-weak); }
+.separator { width: 1px; height: 18px; margin: 0 10px 0 12px; background: var(--neutral-border-medium); }
+.picker { position: relative; display: flex; align-items: center; height: 36px; width: 88px; border-radius: 10px; transition: background .2s; }
+.picker:hover { background: var(--neutral-alpha-weak); }
+.picker select { appearance: none; width: 100%; height: 100%; padding: 0 22px 0 27px; font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .04em; color: inherit; background: transparent; border: 0; border-radius: inherit; cursor: pointer; }
+.picker select:focus-visible { outline: 2px solid var(--brand-on-background-strong); outline-offset: 1px; }
+.picker option { color: var(--neutral-on-background-strong); background: var(--page-background); }
+.globe { position: absolute; left: 6px; width: 16px; height: 16px; pointer-events: none; color: var(--neutral-on-background-weak); }
+.chevron { position: absolute; right: 5px; width: 14px; height: 14px; pointer-events: none; }
+@media(max-width: 768px) { .utility { position: absolute; top: 12px; right: 16px; height: 40px; border-radius: 12px; } .picker { height: 34px; } }
+@media(prefers-reduced-motion: reduce) { .picker { transition: none; } }
