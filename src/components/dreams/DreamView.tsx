@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Dream } from '@/lib/dream';
+import { Dream, convertDreamAmount } from '@/lib/dream';
 import styles from './Dreams.module.scss';
 export function DreamView({ initial, live = false }: { initial: Dream; live?: boolean }) {
   const [dream, setDream] = useState(initial);
@@ -14,7 +14,11 @@ export function DreamView({ initial, live = false }: { initial: Dream; live?: bo
     window.addEventListener('focus', visible);
     return () => { clearInterval(id); controller.abort(); window.removeEventListener('focus', visible); };
   }, [live]);
-  const money = (n: number) => `${new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 2 }).format(n)} ${dream.currency === 'KGS' ? 'сом' : dream.currency}`;
+  const format = (n: number, currency: string) => `${new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 2 }).format(n)} ${currency === 'KGS' ? 'сом' : currency === 'USD' ? '$' : currency}`;
+  const money = (n: number) => format(n, dream.currency);
+  const otherCurrency = dream.currency === 'USD' ? 'KGS' : 'USD';
+  const equivalent = (n: number) => { const amount = convertDreamAmount(n, dream.currency, otherCurrency, dream.exchangeRate); return amount === null ? null : `≈ ${format(amount, otherCurrency)}`; };
+  const remaining = Math.max(0, dream.target - dream.saved);
   const percent = dream.target ? Math.min(100, dream.saved / dream.target * 100) : 0;
   return <div className={styles.page} lang="ru">
     <header className={styles.intro}><span className={styles.eyebrow}>ЛИЧНОЕ / ТО, ЧТО ВДОХНОВЛЯЕТ</span><h1>Мечты становятся<br /><em>ближе.</em></h1><p>У каждой большой мечты есть первый шаг.<br />Здесь я делюсь своей целью и дорогой к ней.</p></header>
@@ -24,9 +28,10 @@ export function DreamView({ initial, live = false }: { initial: Dream; live?: bo
         <div className={styles.visualCaption}><span>01 / DREAM IN PROGRESS</span><span>Маленькими шагами к большому</span></div>
       </div>
       <div className={styles.details}><span className={styles.eyebrow}>НЕ ПРОСТО ВЕЩЬ. ЛИЧНАЯ ЦЕЛЬ.</span><h2>{dream.title}</h2><p>{dream.description}</p>
-        <div className={styles.numbers}><div><span>Уже накоплено</span><strong>{money(dream.saved)}</strong></div><div><span>Моя цель</span><b>{dream.target ? money(dream.target) : 'Уточняю стоимость'}</b></div></div>
+        <div className={styles.numbers}><div><span>Уже накоплено</span><strong>{money(dream.saved)}</strong><small className={styles.equivalent}>{equivalent(dream.saved) ?? 'Пересчёт появится после указания курса'}</small></div><div><span>Моя цель</span><b>{dream.target ? money(dream.target) : 'Уточняю стоимость'}</b>{dream.target > 0 && <small className={styles.equivalent}>{equivalent(dream.target)}</small>}</div></div>
         <div className={styles.progress} role="progressbar" aria-label="Прогресс накоплений" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100}><div style={{ width: `${percent}%` }} /></div>
-        <div className={styles.progressNote}><span>{dream.target ? `${new Intl.NumberFormat('ru', { maximumFractionDigits: 1 }).format(percent)}% пути пройдено` : 'Первый шаг уже сделан'}</span><span>{dream.target ? percent === 100 ? 'Мечта стала реальностью ✦' : `Осталось ${money(Math.max(0, dream.target - dream.saved))}` : 'Всё начинается с мечты'}</span></div>
+        <div className={styles.progressNote}><span>{dream.target ? `${new Intl.NumberFormat('ru', { maximumFractionDigits: 1 }).format(percent)}% пути пройдено` : 'Первый шаг уже сделан'}</span><span>{dream.target ? percent === 100 ? 'Мечта стала реальностью ✦' : `Осталось ${money(remaining)}${equivalent(remaining) ? ` · ${equivalent(remaining)}` : ''}` : 'Всё начинается с мечты'}</span></div>
+        {dream.exchangeRate && <small className={styles.rate}>1 $ = {format(dream.exchangeRate, 'KGS')} · Курс задан владельцем</small>}
         {dream.updatedAt && <small className={styles.updated}>Обновлено {new Date(dream.updatedAt).toLocaleDateString('ru-RU', { timeZone: 'Asia/Bishkek' })} · Сумму обновляю вручную</small>}
       </div>
     </article>

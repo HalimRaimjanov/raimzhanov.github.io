@@ -25,3 +25,8 @@
 @keyframes float { 50% { transform: translateY(-15px) rotate(8deg); } }
 @media (prefers-reduced-motion: reduce) { .orbit span { animation: none; } .progress > div { transition: none; } }
 @media (max-width: 650px) { .page, .admin { padding-top: 20px; padding-bottom: 100px; } .intro { margin-bottom: 30px; } .visual { min-height: 245px; } .visualCaption span:last-child { display: none; } .details { padding: 26px 22px; } .support { grid-template-columns: 1fr; gap: 26px; padding: 28px 22px; } .support h2 { font-size: 27px; } .qr { padding-top: 10px; } .row { grid-template-columns: 1fr; } .progressNote { font-size: 10px; } .admin form { padding: 20px; } }
+
+.equivalent { color: #a8cbb5; font-size: 14px; line-height: 1.5; font-weight: 400; }
+.rate { display: block; margin-top: 18px; font-size: 11px; color: #a1afa6; }
+.numbers > div { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 450px) { .numbers { flex-direction: column; align-items: stretch; gap: 24px; } .numbers > div:last-child { text-align: left; } .progressNote { flex-wrap: wrap; } }
